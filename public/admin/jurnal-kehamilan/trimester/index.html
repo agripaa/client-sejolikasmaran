@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trimester List</title>
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+</head>
+<body>
+  <div id="sidebar-container"></div> 
+  <div class="content">
+    <div class="header-list">
+      <h1>Trimester</h1>
+      <button id="uploadTrimesterBtn" class="add-list">Upload Trimester</button>
+    </div>
+    <table id="journal-table" class="journal-table">
+      <thead>
+        <tr>
+          <th>Trimester</th>
+          <th>Deskripsi Kehamilan</th>
+          <th>Deskripsi Bayi</th>
+          <th>Deskripsi Pasca Kehamilan</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data trimester akan dimuat secara dinamis -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal untuk Upload Trimester -->
+  <div id="uploadTrimesterModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Upload Trimester</h2>
+      <form id="uploadTrimesterForm">
+        <label for="cat_trimester">Category Trimester:</label>
+        <input type="number" id="cat_trimester" name="cat_trimester" min="0">
+        
+        <label for="desc">Deskripsi Kehamilam:</label>
+        <textarea id="desc" name="desc" required></textarea>
+        
+        <label for="baby_desc">Deskripsi Bayi:</label>
+        <textarea id="baby_desc" name="baby_desc" required></textarea>
+
+        <label for="postpartum_desc">Deskripsi Pasca Kehamilam:</label>
+        <textarea id="postpartum_desc" name="postpartum_desc" required></textarea>
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/public/assets/js/sidebar.js"></script>
+  <script src="/public/assets/js/trimester-jurnal.js"></script>
+</body>
+</html>

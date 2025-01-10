@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Kelas</title>
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+</head>
+<body>
+  <div id="sidebar-container"></div>
+  <div class="content">
+    <div class="header-list">
+      <h1>Detail Kelas</h1>
+      <button id="addDetailBtn" class="add-list">Tambah Detail</button>
+    </div>
+    <table id="detail-table" class="journal-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Deskripsi</th>
+          <th>Konten</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data detail kelas akan dimuat di sini -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal untuk Tambah/Edit Detail Kelas -->
+  <div id="detailModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tambah/Edit Detail Kelas</h2>
+      <form id="detailForm" enctype="multipart/form-data">
+        <label for="list_class_id">Kelas:</label>
+        <select id="list_class_id" name="list_class_id" required>
+          <!-- Options kelas akan dimuat di sini -->
+        </select>
+
+        <label for="desc">Deskripsi:</label>
+        <textarea id="desc" name="desc" required></textarea>
+
+        <div id="file-container">
+          <label for="content">Konten (Gambar/Video):</label>
+          <input type="file" id="content" name="content" accept=".jpg, .jpeg, .png, .mp4, .pdf">
+        </div>
+        <button type="button" id="addFileBtn">Tambah Konten</button>
+        <button type="submit">Simpan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/public/assets/js/sidebar.js"></script>
+  <script src="/public/assets/js/detail-kelas.js"></script>
+</body>
+</html>

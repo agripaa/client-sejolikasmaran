@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sejoli Kasmaran</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Tailwind CSS Saas Landing Page" />
+    <meta name="author" content="alithemes.com" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/assets/imgs/logos/sejoli-kasmaran-logo.svg"
+    />
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/public/assets/css/animate.min.css?v=2.0" />
+    <link rel="stylesheet" href="/public/assets/css/slick.css?v=2.0" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/public/assets/css/tailwind-built.css?v=2.0" />
+  </head>
+  <body class="bg-white text-body font-body">
+    <div class="main">
+      <!--Header-->
+      <header class="bg-transparent sticky-bar mt-4">
+        <div class="container bg-transparent">
+          <nav class="bg-transparent flex justify-between items-center py-3">
+            <a
+              class="text-3xl font-semibold leading-none"
+              href="/public/index.html"
+            >
+              <img
+                class="h-10"
+                src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+              <li class="group relative pt-4 pb-4">
+                <a
+                  href="/public/index.html"
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  >Beranda</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/news/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="hidden lg:block" id="navbar-auth">
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            </div>
+            
+            <div class="lg:hidden">
+              <button
+                class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  viewbox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!--Mobile menu-->
+      <div class="hidden navbar-menu relative z-50 transition duration-300">
+        <div
+          class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"
+        ></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300"
+        >
+          <div class="flex items-center mb-8">
+            <a
+              class="mr-auto text-3xl font-semibold leading-none"
+              href="/public/index.html"
+            >
+              <img
+                class="h-10"
+                src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewbox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul class="mobile-menu">
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/index.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="mb-1 menu-item-has-children rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/news/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="hidden lg:block" id="navbar-auth">
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            </div>
+            
+          </div>
+          <div class="mt-auto">
+            <p class="my-4 text-xs text-blueGray-400">
+              <span>Kontak Kami!</span>
+              <a
+                class="text-blue-500 hover:text-blue-500 underline"
+                href="mailto:kontak.sejolikasmaran@gmail.com"
+                >kontak.sejolikasmaran@gmail.com</a
+              >
+            </p>
+            <a
+              class="inline-block px-1"
+              href="https://www.instagram.com/sejolikasmaran"
+            >
+              <img src="/public/assets/imgs/icons/facebook-blue.svg" alt="" />
+            </a>
+            <a
+              class="inline-block px-1"
+              href="https://www.instagram.com/sejolikasmaran"
+            >
+              <img src="/public/assets/imgs/icons/twitter-blue.svg" alt="" />
+            </a>
+            <a
+              class="inline-block px-1"
+              href="https://www.instagram.com/sejolikasmaran"
+            >
+              <img src="/public/assets/imgs/icons/instagram-blue.svg" alt="" />
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <!--Hero-->
+      <section class="relative min-h-screen flex justify-center items-center -mt-24 pt-24">
+        <div
+          class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blueGray-100 z-0"
+          style="z-index: -1"
+        ></div>
+        <div class="container">
+          <div class="flex flex-wrap items-center -mx-3">
+            <div class="w-full lg:w-1/2 px-3">
+              <div class="py-12">
+                <div
+                  class="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left"
+                >
+                  <h2
+                    class="text-3xl lg:text-4xl mb-4 font-bold font-heading wow animate__animated animate__fadeIn"
+                  >
+                    Siap Menyambut Kehidupan Baru
+                    <br />Bersama
+                    <span class="text-blue-500"
+                      >Sekolah Jelang Lahiran Keluarga Sehat Persalinan Aman &
+                      Nyaman</span
+                    >
+                  </h2>
+                  <p
+                    class="text-blueGray-400 leading-relaxed wow animate__animated animate__fadeIn"
+                  >
+                    <strong class="text-blue-500">
+                      Bersiap Daftarkan diri Anda</strong
+                    >, dan pasangan, Luangkan waktu untuk menjelajah Bersama
+                    <strong class="text-blue-500">Sejoli Kasmaran</strong> dan
+                    dapatkan akses edukasi lengkap untuk mempersiapkan diri
+                    sebagai seorang ibu dan ayah yang siap menyambut kehidupan
+                    baru
+                    <span
+                      class="typewrite d-inline text-brand"
+                      data-period="3000"
+                      data-type='["" ]'
+                    ></span>
+                  </p>
+                </div>
+                <div class="text-center lg:text-left">
+                  <a
+                    class="tracking-wide hover-up-2 block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded wow animate__animated animate__fadeInUp"
+                    href="#key-features"
+                    >Mulai Sekarang</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-full lg:w-1/2 px-3 lg:bg-blueGray-10 mb-12 lg:mb-0 pb-10"
+            >
+              <div class="flex items-center justify-center">
+                <img
+                  class="lg:max-w-lg"
+                  src="/public/assets/imgs/illustrations/responding-to-emailss.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Helper -->
+      <section class="pt-16 pb-20" id="key-features">
+        <div class="container">
+          <div class="flex flex-wrap items-center mb-12">
+            <div class="w-full lg:w-1/2 mb-6 lg:mb-0">
+              <h2
+                class="text-4xl font-bold font-heading wow animate__animated animate__fadeInUp"
+                data-wow-delay=".1s"
+              >
+                <span>Butuh Bantuan?</span>
+                <br />
+                <span class="text-blue-600">Kami Siap Membantu!</span>
+              </h2>
+            </div>
+            <div class="w-full lg:w-1/2">
+              <p
+                class="lg:pl-16 text-blueGray-400 leading-loose wow animate__animated animate__fadeInUp"
+                data-wow-delay=".4s"
+              >
+                <strong>Kontak Kami - +62 851 3647 5598</strong> WhatsApp
+              </p>
+              <p
+                class="lg:pl-16 text-blueGray-400 leading-loose wow animate__animated animate__fadeInUp"
+                data-wow-delay=".4s"
+              >
+                Senin - Jum’at, 09.00 - 16.00 WIB
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 -mb-6">
+            <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
+              <a href="/public/news/blog.html">
+                <div
+                  class="border border-gray-100 pt-8 px-6 pb-6 bg-white text-center rounded shadow hover:shadow-lg hover-up-2 transition duration-500 wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".3s"
+                >
+                  <div class="text-blue-500 mx-auto mb-4">
+                    <svg
+                      class="w-8 h-8 mx-auto"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h3 class="mb-2 font-bold font-heading">Berita Terupdate</h3>
+                  <p class="text-sm text-blueGray-400">
+                    Dapatkan informasi terkini tentang dunia parenting, dari
+                    tren terbaru hingga tips terbaik untuk mendukung kesehatan
+                    dan kesejahteraan keluarga Anda.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
+              <a href="/public/services.html">
+                <div
+                  class="border border-gray-100 pt-8 px-6 pb-6 bg-white text-center rounded shadow hover:shadow-lg hover-up-2 transition duration-500 wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".5s"
+                >
+                  <div class="text-blue-500 mx-auto mb-4">
+                    <svg
+                      class="w-8 h-8 mx-auto"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h3 class="mb-2 font-bold font-heading">Tools Interaktif</h3>
+                  <p class="text-sm text-blueGray-400">
+                    Manfaatkan berbagai tools seperti kalkulator kehamilan,
+                    jurnal perkembangan bayi, dan alat interaktif lainnya untuk
+                    membantu Anda memantau perkembangan si kecil dan kesehatan
+                    keluarga.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
+              <a href="/public/consultation-options.html">
+                <div
+                  class="border border-gray-100 pt-8 px-6 pb-6 bg-white text-center rounded shadow hover:shadow-lg hover-up-2 transition duration-500 wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".7s"
+                >
+                  <div class="text-blue-500 mx-auto mb-4">
+                    <svg
+                      class="w-8 h-8 mx-auto"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h3 class="mb-2 font-bold font-heading">
+                    Konsultasi Langsung
+                  </h3>
+                  <p class="text-sm text-blueGray-400">
+                    Ikuti sesi konsultasi langsung dengan konsultan parenting
+                    dan tim ahli kesehatan anak untuk bimbingan dalam mendukung
+                    tumbuh kembang buah hati dan menjaga kesehatan ibu.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/4 px-3 mb-6">
+              <a href="/public/services/study-corner.html">
+                <div
+                  class="border border-gray-100 pt-8 px-6 pb-6 bg-white text-center rounded shadow hover:shadow-lg hover-up-2 transition duration-500 wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".9s"
+                >
+                  <div class="text-blue-500 mx-auto mb-4">
+                    <svg
+                      class="w-8 h-8 mx-auto"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h3 class="mb-2 font-bold font-heading">Edukasi Lengkap</h3>
+                  <p class="text-sm text-blueGray-400">
+                    Telusuri berbagai materi edukasi tentang peran orang tua,
+                    kesehatan ibu dan bayi, serta panduan praktis untuk menjaga
+                    kebahagiaan dan kesejahteraan keluarga Anda.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HAK CIPTA -->
+      <section class="pt-8 pb-8 bg-white text-center">
+        <h3 class="text-lg font-semibold text-blueGray-600 mb-4">
+          Konten Ini Dilindungi Hak Cipta
+        </h3>
+        <p class="text-sm text-blueGray-400 leading-relaxed max-w-md mx-auto">
+          Anda diperkenankan untuk menggunakan konten ini sesuai dengan
+          ketentuan yang berlaku. Untuk keperluan reproduksi atau distribusi
+          lebih lanjut, mohon hubungi pemilik hak cipta untuk mendapatkan izin
+          resmi.
+        </p>
+        <p class="text-sm text-blueGray-400 mt-4">
+          <a
+            href="mailto:kontak.sejolikasmaran@gmail.com"
+            class="text-blue-500 hover:underline"
+          >
+            kontak.sejolikasmaran@gmail.com
+          </a>
+        </p>
+      </section>
+
+      <section class="pt-8 pb-8 container px-auto flex justify-center text-center">
+        <a href="/public/services/live-chat/consultation-options.html">
+          <img src="/public/assets/imgs/cta-livechat.png" class="h-auto rounded-xl" alt="cta livechat img ">
+        </a>
+      </section>
+
+      <!-- Survey -->
+      <section
+        class="py-20 xl:bg-contain bg-top bg-no-repeat"
+        style="
+          background-image: url('/public/assets/imgs/backgrounds/intersect.svg');
+        "
+      >
+        <div class="container">
+          <div class="text-center mb-8">
+            <h2
+              class="max-w-lg mx-auto mb-4 text-4xl font-bold font-heading wow animate__animated animate__fadeInUp animated"
+            >
+              <span>Bantu Kami Menjadi</span>
+              <br />
+              <span class="text-blue-600">Lebih Baik!</span>
+            </h2>
+            <p
+              class="max-w-sm mx-auto text-lg text-blueGray-400 wow animate__animated animate__fadeInUp animated"
+              data-wow-delay=".3s"
+            ></p>
+          </div>
+          <div
+            class="flex flex-wrap bg-white rounded shadow wow animate__animated animate__fadeInUp animated"
+          >
+            <div class="w-full md:w-1/2 lg:w-2/5 px-3">
+              <div class="p-8 text-center">
+                <span class="text-blueGray-400">Ayo</span>
+                <h4 class="mb-6 text-2xl">Bantu Kami!</h4>
+                <div class="text-left mb-5 text-sm text-blueGray-400"></div>
+                <a
+                  href="https://form.jotform.com/242482149826463"
+                  target="_blank"
+                >
+                  <button
+                    class="block w-full p-4 text-center text-xs text-white font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded"
+                  >
+                    Isi Kuesioner
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div
+              class="relative w-full md:w-1/2 lg:w-3/5 px-3 bg-blue-500 rounded-r overflow-hidden"
+            >
+              <div class="max-w-sm px-12 pt-12">
+                <span class="text-xs text-blue-200"
+                  >Kami berkomitmen untuk anda</span
+                >
+                <h3 class="mb-4 text-4xl font-bold font-heading text-white">
+                  Pendapat Anda Penting Bagi Kami!
+                </h3>
+                <br />
+                <br />
+              </div>
+              <div class="absolute right-0 bottom-0">
+                <div class="flex items-center h-full">
+                  <img
+                    class="h-80"
+                    src="/public/assets/imgs/illustrations/conducting keyword research.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="py-20" id="how-we-work">
+        <div class="container">
+          <div class="flex flex-wrap -mx-8">
+            <div class="w-full lg:w-1/2 px-8">
+              <div class="mb-12 lg:mb-0 pb-12 lg:pb-0 border-b lg:border-b-0">
+                <h2
+                  class="mb-4 text-3xl lg:text-4xl font-bold font-heading max-w-md wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".1s"
+                >
+                  Mulai Belajar Bersama
+                  <span class="text-blue-600">Sejoli Kasmaran</span>
+                </h2>
+                <p
+                  class="mb-8 leading-loose text-blueGray-400 wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".3s"
+                >
+                  Ikuti langkah-langkah berikut untuk mempersiapkan diri Anda
+                  dan pasangan menghadapi persalinan yang nyaman dengan
+                  bimbingan dari tim ahli bidan kami.
+                </p>
+                <a
+                  class="inline-block text-xs py-4 px-8 text-white font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded hover-up-2 wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".5s"
+                  href="#"
+                  >Pelajari Lebih Lanjut</a
+                >
+              </div>
+            </div>
+            <div class="w-full lg:w-1/2 px-8">
+              <ul class="space-y-12">
+                <li
+                  class="flex -mx-4 wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".3s"
+                >
+                  <div class="px-4">
+                    <span
+                      class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600"
+                      >1</span
+                    >
+                  </div>
+                  <div class="px-4">
+                    <h3 class="my-4 text-xl font-semibold">
+                      Daftar dan Lengkapi Profil
+                    </h3>
+                    <p class="text-blueGray-400 leading-loose">
+                      Daftar dan lengkapi profil Anda dan pasangan untuk
+                      mendapat akses ke panduan praktis.
+                    </p>
+                  </div>
+                </li>
+                <li
+                  class="flex -mx-4 wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".5s"
+                >
+                  <div class="px-4">
+                    <span
+                      class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600"
+                      >2</span
+                    >
+                  </div>
+                  <div class="px-4">
+                    <h3 class="my-4 text-xl font-semibold">
+                      Mulai Konsultasi dan Program Belajar
+                    </h3>
+                    <p class="text-blueGray-400 leading-loose">
+                      Konsultasikan dengan livechat dan mulai program belajar.
+                    </p>
+                  </div>
+                </li>
+                <li
+                  class="flex -mx-4 wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".7s"
+                >
+                  <div class="px-4">
+                    <span
+                      class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600"
+                      >3</span
+                    >
+                  </div>
+                  <div class="px-4">
+                    <h3 class="my-4 text-xl font-semibold">
+                      Ikuti Kelas dan Pantau Perkembangan
+                    </h3>
+                    <p class="text-blueGray-400 leading-loose">
+                      Mulai ikuti kelas dan pantau perkembangan kehamilan Anda.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service -->
+      <section class="py-12 md:py-20">
+        <div class="container">
+          <div class="flex flex-wrap -mx-3">
+            <div
+              class="relative w-full lg:w-1/3 mb-8 lg:mb-0 text-center lg:text-left"
+            >
+              <div
+                class="max-w-md lg:max-w-xs lg:pr-16 mx-auto lg:ml-0 mb-6 lg:mb-0"
+              >
+                <h2
+                  class="text-3xl md:text-4xl mb-4 font-bold font-heading wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  Fitur Unggulan
+                  <span class="text-blue-500">Sejoli Kasmaran</span>
+                </h2>
+                <p
+                  class="text-xs md:text-base text-blueGray-400 leading-loose wow animate__animated animate__fadeInUp"
+                  data-wow-delay=".9s"
+                >
+                  Berikut adalah beberapa fitur unggulan yang kami tawarkan
+                </p>
+              </div>
+              <div
+                class="lg:absolute lg:bottom-0 lg:left-0 flex justify-center wow animate__animated animate__fadeInUp"
+                data-wow-delay=".5s"
+              >
+                <div id="carausel-fade-1-arrows" class="flex"></div>
+              </div>
+            </div>
+            <div
+              class="w-full lg:w-2/3 flex flex-wrap px-3 wow animate__animated animate__fadeInUp"
+              data-wow-delay=".5s"
+            >
+              <div class="relative w-full rounded">
+                <div
+                  class="carausel-fade slick-carausel rounded"
+                  id="carausel-fade-1"
+                >
+                  <a href="/public/services/online-prenatal-yoga/live-yoga-notification.html">
+                    <img
+                      class="rounded"
+                      src="/public/assets/imgs/placeholders/kelas-yoga.png"
+                      alt=""
+                    />
+                  </a>
+                  <a href="/public/services/live-chat/consultation-options.html">
+                    <img
+                      class="rounded"
+                      src="/public/assets/imgs/placeholders/konsultasi-langsung.png"
+                      alt=""
+                    />
+                  </a>
+                  <a href="/public/services.html">
+                    <img
+                      class="rounded"
+                      src="/public/assets/imgs/placeholders/pojok-pintar.png"
+                      alt=""
+                    />
+                  </a>
+                  <a href="/public/services/pregnancy-journal/journal.html">
+                    <img
+                      class="rounded"
+                      src="/public/assets/imgs/placeholders/journal-kehamilan.png"
+                      alt=""
+                    />
+                  </a>
+                  <a href="/public/services/pregnant-women-community/">
+                    <img
+                      class="rounded"
+                      src="/public/assets/imgs/placeholders/dukungan-komunitas.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Live Chat -->
+      <section
+        class="py-20 xl:bg-contain bg-top bg-no-repeat"
+        style="background-image: url('assets/imgs/backgrounds/intersect.svg')"
+      >
+        <div class="container">
+          <div class="text-center mb-8">
+            <h2
+              class="max-w-lg mx-auto mb-4 text-4xl font-bold font-heading wow animate__animated animate__fadeInUp animated"
+            >
+              <span>Kirim Live Chat</span>
+              <br />
+              <span class="text-blue-600">Sekarang</span>
+              <span>Secara Real Time</span>
+            </h2>
+            <p
+              class="max-w-sm mx-auto text-lg text-blueGray-400 wow animate__animated animate__fadeInUp animated"
+              data-wow-delay=".3s"
+            ></p>
+          </div>
+          <div
+            class="flex flex-wrap bg-white rounded shadow wow animate__animated animate__fadeInUp animated"
+          >
+            <div class="w-full md:w-1/2 lg:w-2/5 px-3">
+              <div class="p-8 text-center">
+                <span class="text-blueGray-400">masuk</span>
+                <h4 class="mb-6 text-2xl">Mulai live chat Anda</h4>
+                <div class="flex mb-4 px-4 bg-blueGray-100 rounded">
+                  <input
+                    class="w-full py-4 text-xs placeholder-blueGray-400 font-semibold leading-none bg-blueGray-100 outline-none"
+                    type="email"
+                    placeholder="nama@email.com"
+                  />
+                  <svg
+                    class="h-6 w-6 ml-4 my-auto text-blueGray-300"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewbox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex mb-6 px-4 bg-blueGray-100 rounded">
+                  <input
+                    class="w-full py-4 text-xs placeholder-blueGray-400 font-semibold leading-none bg-blueGray-100 outline-none"
+                    type="password"
+                    placeholder="Masukkan kata sandi Anda"
+                  />
+                  <button class="ml-4">
+                    <svg
+                      class="h-6 w-6 my-auto text-blueGray-300"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewbox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="text-left mb-5 text-sm text-blueGray-400">
+                  <label>
+                    <input type="checkbox" name="terms" value="1" />
+                    <span class="ml-1"
+                      >Saya setuju dengan syarat dan ketentuan.</span
+                    >
+                  </label>
+                </div>
+                <a href="/public/services/live-chat/consultation-options.html">
+                  <button
+                    class="block w-full p-4 text-center text-xs text-white font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded"
+                  >
+                    Mulai Chat Sekarang
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div
+              class="relative w-full md:w-1/2 lg:w-3/5 px-3 bg-blue-500 rounded-r overflow-hidden"
+            >
+              <div class="max-w-sm px-12 pt-12">
+                <span class="text-xs text-blue-200"
+                  >Dapatkan Bantuan Secara Real-Time</span
+                >
+                <h3 class="mb-4 text-4xl font-bold font-heading text-white">
+                  Tim kami siap membantu melalui live chat.
+                </h3>
+              </div>
+              <div class="absolute right-0 bottom-0">
+                <div class="flex items-center h-full">
+                  <img
+                    class="h-80"
+                    src="/public/assets/imgs/illustrations/email marketing campaigns.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="py-20">
+        <div class="container">
+          <div class="max-w-2xl lg:max-w-3xl mx-auto">
+            <div class="mb-12 text-center">
+              <h2
+                class="text-4xl font-bold font-heading wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".1s"
+              >
+                Kontak Kami!
+              </h2>
+              <p
+                class="text-blueGray-400 wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".5s"
+              >
+                Hubungi kami untuk konsultasi, bantuan, atau informasi lebih
+                lanjut mengenai layanan kehamilan dan kesehatan ibu
+              </p>
+            </div>
+            <div class="flex flex-wrap -mx-3 text-center">
+              <div
+                class="w-1/2 lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".1s"
+              >
+                <svg
+                  class="mb-6 h-8 w-8 mx-auto text-blue-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewbox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+                <div class="leading-relaxed">
+                  <span class="text-sm text-blueGray-400">Telepon</span>
+                  <p>+62 851 3647 5598</p>
+                  <p>+62 851 7173 7973</p>
+                </div>
+              </div>
+              <div
+                class="w-1/2 lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".3s"
+              >
+                <svg
+                  class="mb-6 h-8 w-8 mx-auto text-blue-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewbox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <div class="leading-relaxed">
+                  <span class="text-sm text-blueGray-400">E-mail</span>
+                  <p>
+                    kontak.sejolikasmaran<br />
+                    @gmail.com
+                  </p>
+                </div>
+              </div>
+              <div
+                class="w-full lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".5s"
+              >
+                <svg
+                  class="mb-6 h-8 w-8 mx-auto text-blue-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewbox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <div class="leading-relaxed">
+                  <span class="text-sm text-blueGray-400">Address</span>
+                  <p>
+                    Poltekkes Kemenkes Tasikmalaya Kampus Cirebon, Jln. Pemuda
+                    No.38, Kota Cirebon, Jawa Barat
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Footer 2-->
+      <section class="relative footer-2 border-t border-gray-100">
+        <div
+          class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blueGray-50"
+        ></div>
+        <div class="container">
+          <div class="relative flex flex-wrap -mx-4">
+            <div
+              class="w-full lg:w-1/2 pt-20 px-4 max-w-lg lg:max-w-full mx-auto lg:mx-0 text-center lg:text-left"
+            >
+              <a
+                class="inline-block mx-auto lg:ml-0 text-3xl font-semibold leading-none wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".1s"
+                href="/public/index.html"
+              >
+                <img
+                  class="h-10"
+                  src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                  alt=""
+                />
+              </a>
+              <div class="mt-12 mb-16">
+                <p
+                  class="mb-4 text-xs text-blueGray-400 text-center lg:text-left wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  Berlangganan dan tetap terhubung sepenuhnya dengan Sejoli
+                  Kasmaran!
+                </p>
+                <div
+                  class="flex flex-wrap lg:flex-nowrap items-center wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <div
+                    class="flex w-full lg:w-2/3 mb-3 lg:mb-0 px-4 bg-blueGray-50 rounded"
+                  >
+                    <svg
+                      class="h-6 w-6 my-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewbox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      ></path>
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      ></path>
+                    </svg>
+                    <input
+                      class="w-full py-4 pl-3 text-xs text-blueGray-400 bg-blueGray-50 outline-none"
+                      type="text"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <button
+                    class="hover-up-2 w-full lg:w-auto py-4 px-8 lg:ml-6 text-xs text-white font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded"
+                    type="submit"
+                  >
+                    Buat Akun
+                  </button>
+                </div>
+              </div>
+              <div
+                class="hidden lg:block wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".5s"
+              >
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran .All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="relative w-full lg:w-1/2 px-4 pt-40 lg:pl-12">
+              <div class="flex flex-row flex-wrap justify-around mb-12">
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Tentang</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/about.html"
+                        >Tentang Kami</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Berita & Artikel</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services.html"
+                        >Layanan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/contact.html"
+                        >Kontak</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Fitur</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-calculator/health-calculator.html"
+                        >Kalkulator Prediksi Persalinan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-risk-score/pregnancy-risk.html"
+                        >Skor Risiko Kehamilan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/body-mass-index-calculator/health-calculator-2.html"
+                        >Kalkulator Indeks Masa Tubuh (IMT)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/live-chat/consultation-options.html"
+                        >Live Chat</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-journal/journal.html"
+                        >Jurnal Kehamilanku</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/study-corner.html"
+                        >Pojok Belajar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnant-women-community/coming-soon.html"
+                        >Komunitas Ibu Hamil</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/online-prenatal-yoga/live-yoga-notification.html"
+                        >Kelas Yoga & Relaksasi Prenatal Online</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-full lg:w-auto mb-4 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".5s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Blog</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Artikel Kesehatan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Ibu Hamil Berbagi Cerita</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lg:hidden text-center">
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran. All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End .main -->
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+      <div class="preloader flex-1 content-center">
+        <div class="logo absolute inset-y-2/4 jump">
+          <img
+            src="/public/assets/imgs/logos/sejoli-kasmaran-preloader.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!--Import Vendor Js-->
+    <script src="/public/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/waypoints.js"></script>
+    <script src="/public/assets/js/vendor/counterup.js"></script>
+    <script src="/public/assets/js/vendor/slick.js"></script>
+    <script src="/public/assets/js/vendor/wow.js"></script>
+    <script src="/public/assets/js/vendor/scrollup.js"></script>
+    <script src="/public/assets/js/vendor/smooth.js"></script>
+    <script src="/public/assets/js/vendor/textType.js"></script>
+    <script src="/public/assets/js/vendor/mobile-menu.js"></script>
+    <script src="/public/assets/js/main.js?v=2.0"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/671916152480f5b4f5925ef4/1iasvshrd";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('./config.json')
+        .then((response) => response.json())
+        .then(async (config) => {
+          const apiBaseUrl = config.API_BASE_URL;
+          const profilUrl = `${apiBaseUrl}/auth/profile`;
+          const token = localStorage.getItem('token');
+
+          const navbarAuth = document.getElementById('navbar-auth');
+
+          if (!token) {
+            navbarAuth.innerHTML = `
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            `;
+            return;
+          }
+
+          try {
+            const response = await fetch(profilUrl, {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `${token}`,
+              },
+            });
+
+            if (!response.ok) {
+              navbarAuth.innerHTML = `
+                <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+                <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+              `;
+              return;
+            }
+
+            const result = await response.json();
+            const username = result.result.username; 
+
+            navbarAuth.innerHTML = `
+              <a href="/public/user/profile.html" class="text-sm font-semibold text-blueGray-600 mr-4">Hello, ${username}!</a>
+              <button class="btn-accent hover-up-2" id="logout">Keluar</button>
+            `;
+
+            document.getElementById('logout').addEventListener('click', () => {
+              localStorage.removeItem('token');
+              window.location.reload();
+            });
+          } catch (error) {
+            console.error('Gagal mendapatkan profil:', error);
+            navbarAuth.innerHTML = `
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            `;
+          }
+        })
+        .catch((error) => console.error('Gagal memuat konfigurasi:', error));
+    });
+
+    </script>
+    <!--End of Tawk.to Script-->
+  </body>
+</html>

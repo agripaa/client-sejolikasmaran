@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Pojok Belajar</title>
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+</head>
+<body>
+  <div id="sidebar-container"></div> 
+  <div class="content">
+    <div class="header-list">
+      <h1>List Pojok Belajar</h1>
+      <button id="addLearnListBtn" class="add-list">Tambah Pembelajaran</button>
+    </div>
+    <table id="learn-list-table" class="journal-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Judul</th>
+          <th>Desc</th>
+          <th>Kategori</th>
+          <th>Gambar</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data pembelajaran akan dimuat di sini -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal untuk Tambah/Edit Pembelajaran -->
+  <div id="learnListModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tambah/Edit Pembelajaran</h2>
+      <form id="learnListForm" enctype="multipart/form-data">
+        <label for="title">Judul:</label>
+        <input type="text" id="title" name="title" required>
+        
+        <label for="desc">Judul:</label>
+        <input type="text" id="desc" name="desc" required>
+
+        <label for="category_id">Kategori:</label>
+        <select id="category_id" name="category_id" required>
+          <!-- Options kategori akan dimuat di sini -->
+        </select>
+
+        <label for="img_path">Gambar:</label>
+        <input type="file" id="img_path" name="img_path" accept=".jpg, .jpeg, .png">
+
+        <button type="submit">Simpan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/public/assets/js/sidebar.js"></script>
+  <script src="/public/assets/js/list-belajar.js"></script>
+</body>
+</html>

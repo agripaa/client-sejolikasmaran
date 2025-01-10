@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sejoli Kasmaran</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Tailwind CSS Saas Landing Page" />
+    <meta name="author" content="alithemes.com" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/assets/imgs/logos/sejoli-kasmaran-logo.svg"
+    />
+    <!-- Vendor CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/assets/css/animate.min.css?v=2.0" />
+    <link rel="stylesheet" href="/public/assets/css/slick.css?v=2.0" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/public/assets/css/tailwind-built.css?v=2.0" />
+  </head>
+  <body class="bg-white text-body font-body">
+    <div class="main">
+      <!--Header-->
+      <header class="bg-transparent sticky-bar mt-4">
+        <div class="container bg-transparent">
+          <nav class="bg-transparent flex justify-between items-center py-3">
+            <a
+              class="text-3xl font-semibold leading-none"
+              href="/public/index.html"
+            >
+              <img
+                class="h-10"
+                src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+              <li class="group relative pt-4 pb-4">
+                <a
+                  href="/public/index.html"
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  >Beranda</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/news/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="hidden lg:block" id="navbar-auth">
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            </div>
+            
+            <div class="lg:hidden">
+              <button
+                class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  viewbox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!--Mobile menu-->
+      <div class="hidden navbar-menu relative z-50 transition duration-300">
+        <div
+          class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"
+        ></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300"
+        >
+          <div class="flex items-center mb-8">
+            <a
+              class="mr-auto text-3xl font-semibold leading-none"
+              href="/public/index.html"
+            >
+              <img
+                class="h-10"
+                src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewbox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul class="mobile-menu">
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/index.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="mb-1 menu-item-has-children rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/news/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="hidden lg:block" id="navbar-auth">
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <main class="container min-h-screen flex justify-center items-center">
+        <!-- Kalkulator Prediksi Kehamilan -->
+        <section id="pregnancy-calculator" class="container mx-auto px-4 py-8">
+          <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+            <!-- Gambar -->
+            <img
+              src="/public/assets/imgs/helath-calculator.png"
+              alt="Deskripsi Gambar"
+              class="w-full rounded-lg object-cover"
+              style="aspect-ratio: 16/9"
+            />
+          </div>
+          <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold text-center text-gray-700 mb-6">
+              Kalkulator Perkiraan Kelahiran
+            </h2>
+            <form id="pregnancy-form" class="space-y-6">
+              <div class="space-y-4">
+                <label for="lmp" class="block text-gray-600"
+                  >Masukkan Tanggal Hari Pertama Haid Terakhir (HPHT):</label
+                >
+                <input
+                  type="date"
+                  id="lmp"
+                  required
+                  class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-indigo-600 text-white p-3 rounded-md hover:bg-indigo-700"
+              >
+                Hitung Perkiraan Kelahiran
+              </button>
+            </form>
+            <div id="pregnancy-result" class="mt-4"></div>
+          </div>
+        </section>
+      </main>
+
+      <!--Footer 2-->
+      <section class="relative footer-2 border-t border-gray-100">
+        <div
+          class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blueGray-50"
+        ></div>
+        <div class="container">
+          <div class="relative flex flex-wrap -mx-4">
+            <div
+              class="w-full lg:w-1/2 pt-20 px-4 max-w-lg lg:max-w-full mx-auto lg:mx-0 text-center lg:text-left"
+            >
+              <a
+                class="inline-block mx-auto lg:ml-0 text-3xl font-semibold leading-none wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".1s"
+                href="/public/index.html"
+              >
+                <img
+                  class="h-10"
+                  src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                  alt=""
+                />
+              </a>
+              <div class="mt-12 mb-16">
+                <p
+                  class="mb-4 text-xs text-blueGray-400 text-center lg:text-left wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  Berlangganan dan tetap terhubung sepenuhnya dengan Sejoli
+                  Kasmaran!
+                </p>
+                <div
+                  class="flex flex-wrap lg:flex-nowrap items-center wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <div
+                    class="flex w-full lg:w-2/3 mb-3 lg:mb-0 px-4 bg-blueGray-50 rounded"
+                  >
+                    <svg
+                      class="h-6 w-6 my-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewbox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      ></path>
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      ></path>
+                    </svg>
+                    <input
+                      class="w-full py-4 pl-3 text-xs text-blueGray-400 bg-blueGray-50 outline-none"
+                      type="text"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <button
+                    class="hover-up-2 w-full lg:w-auto py-4 px-8 lg:ml-6 text-xs text-white font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded"
+                    type="submit"
+                  >
+                    Buat Akun
+                  </button>
+                </div>
+              </div>
+              <div
+                class="hidden lg:block wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".5s"
+              >
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran .All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="relative w-full lg:w-1/2 px-4 pt-40 lg:pl-12">
+              <div class="flex flex-row flex-wrap justify-around mb-12">
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Tentang</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/about.html"
+                        >Tentang Kami</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Berita & Artikel</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services.html"
+                        >Layanan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/contact.html"
+                        >Kontak</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Fitur</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-calculator/health-calculator.html"
+                        >Kalkulator Prediksi Persalinan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-risk-score/pregnancy-risk.html"
+                        >Skor Risiko Kehamilan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/body-mass-index-calculator/health-calculator-2.html"
+                        >Kalkulator Indeks Masa Tubuh (IMT)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/live-chat/consultation-options.html"
+                        >Live Chat</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-journal/journal.html"
+                        >Jurnal Kehamilanku</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/study-corner.html"
+                        >Pojok Belajar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnant-women-community/coming-soon.html"
+                        >Komunitas Ibu Hamil</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/online-prenatal-yoga/live-yoga-notification.html"
+                        >Kelas Yoga & Relaksasi Prenatal Online</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-full lg:w-auto mb-4 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".5s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Blog</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Artikel Kesehatan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Ibu Hamil Berbagi Cerita</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lg:hidden text-center">
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran. All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End .main -->
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+      <div class="preloader flex-1 content-center">
+        <div class="logo absolute inset-y-2/4 jump">
+          <img
+            src="/public/assets/imgs/logos/sejoli-kasmaran-preloader.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!--Import Vendor Js-->
+    <script src="/public/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/waypoints.js"></script>
+    <script src="/public/assets/js/vendor/counterup.js"></script>
+    <script src="/public/assets/js/vendor/slick.js"></script>
+    <script src="/public/assets/js/vendor/wow.js"></script>
+    <script src="/public/assets/js/vendor/scrollup.js"></script>
+    <script src="/public/assets/js/vendor/smooth.js"></script>
+    <script src="/public/assets/js/vendor/textType.js"></script>
+    <script src="/public/assets/js/vendor/mobile-menu.js"></script>
+    <script src="/public/assets/js/main.js?v=2.0"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Kalkulator Prediksi Kehamilan
+        const pregnancyForm = document.querySelector("#pregnancy-form");
+        pregnancyForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          const lmp = new Date(document.getElementById("lmp").value); // Tanggal HPHT
+          const today = new Date();
+          const gestationalAge = Math.floor(
+            (today - lmp) / (1000 * 60 * 60 * 24 * 7)
+          ); // Usia kehamilan dalam minggu
+          const dueDate = new Date(lmp);
+          dueDate.setDate(lmp.getDate() + 280); // Perkiraan tanggal lahir (40 minggu dari HPHT)
+
+          let trimester = "";
+          let trimesterInfo = "";
+          let tips = "";
+          let emoji = "✨"; // Default emoji
+
+          if (gestationalAge <= 13) {
+            trimester = "Trimester Pertama (0-13 Minggu)";
+            trimesterInfo =
+              "Selamat memasuki awal kehamilan! 🍼 Trimester pertama adalah waktu penting untuk perkembangan awal janin. Mulailah mengonsumsi asam folat dan vitamin prenatal lainnya, hindari konsumsi kafein berlebih, dan tetap terhidrasi.";
+            tips =
+              "🍽️ Makan dalam porsi kecil tapi sering untuk mengurangi mual, dan lakukan aktivitas ringan seperti berjalan kaki. 🚶‍♀️";
+            emoji = "👶";
+          } else if (gestationalAge <= 27) {
+            trimester = "Trimester Kedua (14-27 Minggu)";
+            trimesterInfo =
+              "Anda berada di Trimester kedua! 🤰 Ini adalah saat kehamilan terasa lebih stabil. Mulai fokus pada pola makan sehat dan rutin melakukan latihan ringan untuk menjaga kesehatan tubuh.";
+            tips =
+              "🧘‍♀️ Mulailah melakukan latihan senam kehamilan atau yoga prenatal untuk memperkuat otot dan meningkatkan fleksibilitas. 💪";
+            emoji = "🤱";
+          } else if (gestationalAge <= 40) {
+            trimester = "Trimester Ketiga (28-40 Minggu)";
+            trimesterInfo =
+              "Trimester ketiga sudah tiba! 🏁 Persiapkan mental dan fisik Anda menjelang kelahiran. Jaga asupan makanan kaya serat untuk mencegah sembelit dan tetap terhidrasi dengan baik.";
+            tips =
+              "🧘‍♂️ Pelajari teknik pernapasan dan relaksasi untuk persiapan persalinan, dan ajak pasangan untuk ikut serta. 👨‍👩‍👧";
+            emoji = "🎉";
+          } else {
+            trimester = "Di luar perkiraan trimester";
+            trimesterInfo =
+              "Data usia kehamilan melebihi 40 minggu, harap periksa kembali input tanggal HPHT. 🧐";
+            tips =
+              "⚠️ Konsultasikan dengan dokter untuk informasi lebih lanjut. ⚕️";
+            emoji = "⚠️";
+          }
+
+          const options = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          };
+          const dueDateString = dueDate.toLocaleDateString("id-ID", options);
+
+          document.getElementById("pregnancy-result").innerHTML = `
+            <div>Usia kehamilan Anda adalah <span class="font-bold text-blue-500">${gestationalAge} minggu</span>. ${emoji}</div>
+            <div>Perkiraan tanggal persalinan Anda adalah <span class="font-bold text-blue-500">${dueDateString}</span>. ${emoji}</div>
+            <div class="mt-4">
+              <h3 class="text-xl font-bold text-indigo-600">${trimester}</h3>
+              <p>${trimesterInfo}</p>
+              <h4 class="text-lg font-bold mt-2 text-green-500">Tips:</h4>
+              <p>${tips}</p>
+            </div>
+          `;
+        });
+
+        // Kalkulator IMT
+        const bmiForm = document.querySelector("#bmi-form");
+
+        bmiForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          const preweight = parseFloat(
+            document.getElementById("preweight").value
+          );
+          const height =
+            parseFloat(document.getElementById("height").value) / 100; // Konversi ke meter
+          const trimester = document.getElementById("trimester").value;
+
+          const bmi = (preweight / (height * height)).toFixed(2);
+          let bmiCategory = "";
+          let message = "";
+          let emoji = "";
+
+          if (bmi < 18.5) {
+            bmiCategory =
+              "<span class='text-yellow-500 font-bold'>Kurus</span>";
+            emoji = "😟";
+
+            if (trimester === "1") {
+              message = `
+                Pada trimester pertama, penting bagi Anda untuk meningkatkan asupan kalori guna mendukung perkembangan janin. Konsumsi makanan kaya nutrisi. Jangan lupa minum air putih yang cukup agar tubuh tetap terhidrasi. ${emoji}
+                <br><br><strong>Tips Tambahan:</strong> Makan dalam porsi kecil tapi sering, dan tambahkan camilan bergizi di antara waktu makan utama seperti yogurt, kacang almond, atau smoothie buah segar. 🥑🍗
+              `;
+            } else if (trimester === "2") {
+              message = `
+                Pada trimester kedua, fokuskan pada penambahan berat badan yang stabil dengan mengonsumsi lebih banyak protein berkualitas. 🐟🥩 ${emoji}
+                <br><br><strong>Tips Tambahan:</strong> Tambahkan lemak sehat seperti minyak zaitun atau mentega almond dalam makanan utama.
+              `;
+            } else {
+              message = `
+                Pada trimester ketiga, janin akan mengalami pertumbuhan pesat, sehingga kebutuhan kalori meningkat lagi. Perbanyak makanan kaya zat besi dan vitamin C untuk mencegah anemia. ${emoji}
+                <br><br><strong>Tips Tambahan:</strong> Camilan yang kaya nutrisi seperti selai kacang di atas roti gandum atau buah segar dengan yogurt sangat disarankan. 🥙
+              `;
+            }
+          } else if (bmi < 24.9) {
+            bmiCategory =
+              "<span class='text-green-500 font-bold'>Normal</span>";
+            emoji = "😊";
+
+            message = `
+              Pada trimester ke-${trimester}, penting untuk menjaga pola makan yang seimbang. Fokus pada makanan kaya nutrisi seperti buah, sayuran, dan protein sehat. ${emoji}
+              <br><br><strong>Tips Tambahan:</strong> Lanjutkan pola makan sehat dan tetap aktif secara fisik dengan yoga prenatal atau berjalan santai.
+            `;
+          } else if (bmi < 29.9) {
+            bmiCategory =
+              "<span class='text-orange-500 font-bold'>Gemuk</span>";
+            emoji = "😐";
+
+            message = `
+              Jika Anda berada dalam kategori gemuk pada trimester ke-${trimester}, penting untuk menjaga kenaikan berat badan yang terkendali. Batasi asupan kalori dari makanan berlemak dan perbanyak konsumsi sayuran. ${emoji}
+              <br><br><strong>Tips Tambahan:</strong> Pertimbangkan untuk lebih aktif dengan berjalan kaki atau mengikuti kelas yoga prenatal.
+            `;
+          } else {
+            bmiCategory =
+              "<span class='text-red-500 font-bold'>Obesitas</span>";
+            emoji = "😟";
+
+            message = `
+              Pada trimester ke-${trimester}, sangat penting untuk memantau berat badan dan mengonsumsi makanan rendah kalori yang kaya nutrisi seperti sayuran dan protein tanpa lemak. ${emoji}
+              <br><br><strong>Tips Tambahan:</strong> Tetap aktif secara fisik dan konsultasikan dengan dokter untuk pengelolaan berat badan yang optimal.
+            `;
+          }
+
+          document.getElementById("bmi-result").innerHTML = `
+            <div class="mt-4">
+              <h3 class="text-xl font-bold text-indigo-600">Kategori IMT: ${bmiCategory}</h3>
+              <p>${message}</p>
+              <p>IMT Anda adalah: <span class="font-bold">${bmi}</span></p>
+            </div>
+          `;
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('../../config.json')
+          .then((response) => response.json())
+          .then(async (config) => {
+            const apiBaseUrl = config.API_BASE_URL;
+            const profilUrl = `${apiBaseUrl}/auth/profile`;
+            const token = localStorage.getItem('token');
+
+            const navbarAuth = document.getElementById('navbar-auth');
+
+            if (!token) {
+              navbarAuth.innerHTML = `
+                <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+                <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+              `;
+              return;
+            }
+
+            try {
+              const response = await fetch(profilUrl, {
+                method: 'GET',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `${token}`,
+                },
+              });
+
+              if (!response.ok) {
+                navbarAuth.innerHTML = `
+                  <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+                  <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+                `;
+                return;
+              }
+
+              const result = await response.json();
+              const username = result.result.username; // Pastikan API mengembalikan `username`
+
+              navbarAuth.innerHTML = `
+                <a href="/public/user/profile.html" class="text-sm font-semibold text-blueGray-600 mr-4">Hello, ${username}!</a>
+                <button class="btn-accent hover-up-2" id="logout">Keluar</button>
+              `;
+
+              // Tambahkan event listener untuk tombol logout
+              document.getElementById('logout').addEventListener('click', () => {
+                localStorage.removeItem('token');
+                window.location.reload();
+              });
+            } catch (error) {
+              console.error('Gagal mendapatkan profil:', error);
+              navbarAuth.innerHTML = `
+                <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+                <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+              `;
+            }
+          })
+          .catch((error) => console.error('Gagal memuat konfigurasi:', error));
+      });
+
+    </script>
+  </body>
+</html>

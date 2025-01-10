@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Yoga</title>
+  <link rel="stylesheet" href="/public/assets/css/style.css" />
+  <style>
+    .header-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .header-list h1 {
+      font-size: 24px;
+    }
+
+    .add-class-btn {
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .add-class-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .class-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .class-table th,
+    .class-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    .class-table th {
+      background-color: #f4f4f4;
+    }
+
+    .action-buttons a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .action-buttons a:hover {
+      text-decoration: underline;
+    }
+
+    .action-buttons button:hover {
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="sidebar-container"></div>
+  <div class="content">
+    <div class="header-list">
+      <h1>Yoga Classes</h1>
+      <button id="add-class-btn" class="add-class-btn">Add Yoga Class</button>
+    </div>
+    <table class="class-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>URL</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="class-table-body">
+        <!-- Data will be dynamically loaded here -->
+      </tbody>
+    </table>
+  </div>
+
+  <div id="modal-container" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2 id="modal-title">Add Yoga Class</h2>
+      <form id="yoga-form">
+        <div class="form-group">
+          <label for="url-link">URL Link</label>
+          <input type="url" id="url-link" name="url_link" placeholder="Enter URL link" required />
+        </div>
+        <button type="submit" id="save-btn">Save</button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="/public/assets/js/sidebar.js"></script>
+  <script src="/public/assets/js/preview-classyoga.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>

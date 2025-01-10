@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Belajar</title>
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+</head>
+<body>
+  <div id="sidebar-container"></div> 
+  <div class="content">
+    <div class="header-list">
+      <h1>Category Belajar</h1>
+      <button id="addCategoryBtn" class="add-list">Tambah Kategori</button>
+    </div>
+    <table id="category-table" class="journal-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nama Kategori</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data kategori belajar akan dimuat di sini -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal untuk Tambah/Edit Kategori -->
+  <div id="categoryModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tambah/Edit Kategori</h2>
+      <form id="categoryForm">
+        <label for="category_name">Nama Kategori:</label>
+        <input type="text" id="category_name" name="category_name" required>
+        <button type="submit">Simpan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/public/assets/js/sidebar.js"></script>
+  <script src="/public/assets/js/category-belajar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

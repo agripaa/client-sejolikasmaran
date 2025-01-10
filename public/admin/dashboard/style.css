@@ -1,0 +1,107 @@
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.list-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #0091d4;
+    width: 100%;
+    height: auto;
+    margin: 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.list-info h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.list-info h4 {
+    font-size: 1.4rem;
+}
+
+.filter-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Dua kolom */
+    grid-template-rows: repeat(4, auto); /* Empat baris */
+    gap: 10px; /* Jarak antar grid items */
+    width: 100%;
+    margin-top: 70px;
+}
+
+.list-direct {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.list-direct:nth-child(1) {
+    background-color: #00b0f0; /* Blue */
+}
+
+.list-direct:nth-child(2) {
+    background-color: #7030a0; /* Purple */
+}
+
+.list-direct:nth-child(3) {
+    background-color: #f012be; /* Pink */
+}
+
+.list-direct:nth-child(4) {
+    background-color: #ffc000; /* Yellow */
+}
+
+.list-direct a {
+    color: white; /* Untuk menjaga kontras teks */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.list-direct:hover {
+    opacity: 0.9; /* Efek hover */
+}
+
+
+.list-direct h4 {
+    margin: 0;
+}
+
+#downloadUserData {
+    background-color: rgb(144, 250, 37);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    color: #252525;
+}
+
+#yearSelect {
+    border: none;
+    font-size: 16px;
+}
+
+#yearSelect::after {
+    border: none;
+    font-size: 16px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Jurnal</title>
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+</head>
+<body>
+  <div id="sidebar-container"></div> 
+  <div class="content">
+    <div class="header-list">
+      <h1>Category Jurnal</h1>
+      <button id="uploadCategoryBtn" class="add-list">Tambah Category</button>
+    </div>
+    <table id="category-table" class="journal-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Kategori</th>
+          <th>Kategori Jurnal</th>
+          <th>Tanggal Bayi Lahir</th>
+          <th>Trimester</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data akan dimuat secara dinamis -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal untuk Upload/Update Category -->
+  <div id="uploadCategoryModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Tambah/Edit Category</h2>
+      <form id="uploadCategoryForm">
+        <label for="category_jurnal">Kategori:</label>
+        <input type="text" id="category_jurnal" name="category_jurnal" required>
+        
+
+        <label for="trimester_id">Trimester:</label>
+        <select id="trimester_id" name="trimester_id" required>
+          <!-- Options akan dimuat secara dinamis -->
+        </select>
+
+        <label for="cat_journal_id">Category Journal:</label>
+        <select id="cat_journal_id" name="cat_journal_id" required>
+          <option value="1">Jurnal Bayi Kecilku</option>
+          <option value="2">Jurnal Kehamilanku</option>
+          <option value="3">Jurnal Pasca Kehamilanku</option>
+        </select>
+        
+        <button type="submit">Simpan</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/public/assets/js/sidebar.js"></script>
+  <script src="/public/assets/js/category-jurnal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

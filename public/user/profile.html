@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Sejoli Kasmaran</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Landing Page Tailwind CSS" />
+    <meta name="author" content="alithemes.com" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/assets/imgs/logos/sejoli-kasmaran-logo.svg"
+    />
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/public/assets/css/animate.min.css?v=2.0" />
+    <link rel="stylesheet" href="/public/assets/css/slick.css?v=2.0" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/public/assets/css/tailwind-built.css?v=2.0" />
+  </head>
+  <body class="bg-white text-body font-body">
+    <div class="main">
+      <!--Header-->
+      <header class="bg-transparent sticky-bar mt-4">
+        <div class="container bg-transparent">
+          <nav class="bg-transparent flex justify-between items-center py-3">
+            <a
+              class="text-3xl font-semibold leading-none"
+              href="/public/index.html"
+            >
+              <img
+                class="h-10"
+                src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+              <li class="group relative pt-4 pb-4">
+                <a
+                  href="/public/index.html"
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  >Beranda</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/news/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="hidden lg:block" id="navbar-auth">
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            </div>
+            
+            <div class="lg:hidden">
+              <button
+                class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  viewbox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!--Mobile menu-->
+      <div class="hidden navbar-menu relative z-50 transition duration-300">
+        <div
+          class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"
+        ></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300"
+        >
+          <div class="flex items-center mb-8">
+            <a
+              class="mr-auto text-3xl font-semibold leading-none"
+              href="/public/index.html"
+            >
+              <img
+                class="h-10"
+                src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewbox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul class="mobile-menu">
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/index.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="mb-1 menu-item-has-children rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/news/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="hidden lg:block" id="navbar-auth">
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            </div>
+            
+          </div>
+          <div class="mt-auto">
+            <p class="my-4 text-xs text-blueGray-400">
+              <span>Kontak Kami!</span>
+              <a
+                class="text-blue-500 hover:text-blue-500 underline"
+                href="mailto:kontak.sejolikasmaran@gmail.com"
+                >kontak.sejolikasmaran@gmail.com</a
+              >
+            </p>
+            <a
+              class="inline-block px-1"
+              href="https://www.instagram.com/sejolikasmaran"
+            >
+              <img src="/public/assets/imgs/icons/facebook-blue.svg" alt="" />
+            </a>
+            <a
+              class="inline-block px-1"
+              href="https://www.instagram.com/sejolikasmaran"
+            >
+              <img src="/public/assets/imgs/icons/twitter-blue.svg" alt="" />
+            </a>
+            <a
+              class="inline-block px-1"
+              href="https://www.instagram.com/sejolikasmaran"
+            >
+              <img src="/public/assets/imgs/icons/instagram-blue.svg" alt="" />
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <section class="pt-12 pb-20 min-h-screen">
+        <div class="container mx-auto mt-10 p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-bold mb-6 text-center">Lengkapi Profil Anda!</h2>
+            <form id="updateProfileForm">
+              <div class="mb-4">
+                <label for="username" class="block text-sm font-bold mb-2">Nama Pengguna</label>
+                <input
+                  id="username"
+                  type="text"
+                  class="w-full border-none border-b py-2"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-sm font-bold mb-2">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  class="w-full border-none border-b py-2"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="phone" class="block text-sm font-bold mb-2">Nomor Telepon</label>
+                <input
+                  id="phone"
+                  type="tel"
+                  class="w-full border-none border-b py-2"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="address" class="block text-sm font-bold mb-2">Alamat</label>
+                <input
+                  id="address"
+                  type="text"
+                  class="w-full border-none border-b py-2"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="date_birth" class="block text-sm font-bold mb-2">Tanggal Lahir</label>
+                <input
+                  id="date_birth"
+                  type="date"
+                  class="w-full border-none border-b py-2"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="relation_types" class="block text-sm font-bold mb-2">Jenis Hubungan</label>
+                <select id="relation_types" class="w-full border-none border-b py-2">
+                  <option value="1">Ibu</option>
+                  <option value="2">Ayah</option>
+                  <option value="3">Kerabat</option>
+                </select>
+              </div>
+              <div id="husband_name" class="mb-4">
+                <label for="husband_name_input" class="block text-sm font-bold mb-2">Nama Suami</label>
+                <input
+                  id="husband_name_input"
+                  type="text"
+                  class="w-full border-none border-b py-2"
+                />
+              </div>
+              <div id="wife_name" class="mb-4">
+                <label for="wife_name_input" class="block text-sm font-bold mb-2">Nama Istri</label>
+                <input
+                  id="wife_name_input"
+                  type="text"
+                  class="w-full border-none border-b py-2"
+                />
+              </div>
+              <div class="w-full flex justify-end mt-8">
+                <button
+                  id="updateProfileBtn"
+                  type="button"
+                  class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
+                >
+                  Simpan Perubahan
+                </button>
+              </div>
+            </form>
+          </div>
+      </section>
+
+      <!--Footer 2-->
+      <section class="relative footer-2 border-t border-gray-100">
+        <div
+          class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blueGray-50"
+        ></div>
+        <div class="container">
+          <div class="relative flex flex-wrap -mx-4">
+            <div
+              class="w-full lg:w-1/2 pt-20 px-4 max-w-lg lg:max-w-full mx-auto lg:mx-0 text-center lg:text-left"
+            >
+              <a
+                class="inline-block mx-auto lg:ml-0 text-3xl font-semibold leading-none wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".1s"
+                href="/public/index.html"
+              >
+                <img
+                  class="h-10"
+                  src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                  alt=""
+                />
+              </a>
+              <div class="mt-12 mb-16">
+                <p
+                  class="mb-4 text-xs text-blueGray-400 text-center lg:text-left wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  Berlangganan dan tetap terhubung sepenuhnya dengan Sejoli
+                  Kasmaran!
+                </p>
+                <div
+                  class="flex flex-wrap lg:flex-nowrap items-center wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <div
+                    class="flex w-full lg:w-2/3 mb-3 lg:mb-0 px-4 bg-blueGray-50 rounded"
+                  >
+                    <svg
+                      class="h-6 w-6 my-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewbox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      ></path>
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      ></path>
+                    </svg>
+                    <input
+                      class="w-full py-4 pl-3 text-xs text-blueGray-400 bg-blueGray-50 outline-none"
+                      type="text"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <button
+                    class="hover-up-2 w-full lg:w-auto py-4 px-8 lg:ml-6 text-xs text-white font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded"
+                    type="submit"
+                  >
+                    Buat Akun
+                  </button>
+                </div>
+              </div>
+              <div
+                class="hidden lg:block wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".5s"
+              >
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran .All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="relative w-full lg:w-1/2 px-4 pt-40 lg:pl-12">
+              <div class="flex flex-row flex-wrap justify-around mb-12">
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Tentang</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/about.html"
+                        >Tentang Kami</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Berita & Artikel</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services.html"
+                        >Layanan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/contact.html"
+                        >Kontak</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Fitur</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-calculator/health-calculator.html"
+                        >Kalkulator Prediksi Persalinan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-risk-score/pregnancy-risk.html"
+                        >Skor Risiko Kehamilan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/body-mass-index-calculator/health-calculator-2.html"
+                        >Kalkulator Indeks Masa Tubuh (IMT)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/live-chat/consultation-options.html"
+                        >Live Chat</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-journal/journal.html"
+                        >Jurnal Kehamilanku</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/study-corner.html"
+                        >Pojok Belajar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnant-women-community/coming-soon.html"
+                        >Komunitas Ibu Hamil</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/online-prenatal-yoga/live-yoga-notification.html"
+                        >Kelas Yoga & Relaksasi Prenatal Online</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-full lg:w-auto mb-4 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".5s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Blog</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Artikel Kesehatan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Ibu Hamil Berbagi Cerita</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lg:hidden text-center">
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran. All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End .main -->
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+      <div class="preloader flex-1 content-center">
+        <div class="logo absolute inset-y-2/4 jump">
+          <img
+            src="/public/assets/imgs/logos/sejoli-kasmaran-preloader.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!--Import Vendor Js-->
+    <script src="/public/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/waypoints.js"></script>
+    <script src="/public/assets/js/vendor/counterup.js"></script>
+    <script src="/public/assets/js/vendor/slick.js"></script>
+    <script src="/public/assets/js/vendor/wow.js"></script>
+    <script src="/public/assets/js/vendor/scrollup.js"></script>
+    <script src="/public/assets/js/vendor/smooth.js"></script>
+    <script src="/public/assets/js/vendor/textType.js"></script>
+    <script src="/public/assets/js/vendor/mobile-menu.js"></script>
+    <script src="/public/assets/js/main.js?v=2.0"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const husbandField = document.getElementById('husband_name');
+  const wifeField = document.getElementById('wife_name');
+
+  // Function to toggle fields based on relation type
+  function toggleFields(relationType) {
+    if (relationType === '1' || relationType === 1) {
+      husbandField.style.display = 'block';
+      wifeField.style.display = 'none';
+    } else if (relationType === '2' || relationType === 2) {
+      husbandField.style.display = 'none';
+      wifeField.style.display = 'block';
+    } else if (relationType === '3' || relationType === 3) {
+      husbandField.style.display = 'none';
+      wifeField.style.display = 'none';
+    }
+  }
+
+  // Fetch profile and populate form
+  fetch('../config.json')
+    .then((response) => response.json())
+    .then(async (config) => {
+      const apiBaseUrl = config.API_BASE_URL;
+      const profilUrl = `${apiBaseUrl}/auth/profile`;
+      const updateProfileUrl = `${apiBaseUrl}/user/update`;
+      const token = localStorage.getItem('token');
+      const navbarAuth = document.getElementById('navbar-auth');
+
+      if (!token) {
+        alert('Silakan login terlebih dahulu.');
+        window.location.href = '/public/user/login.html';
+        return;
+      }
+
+      try {
+        const response = await fetch(profilUrl, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `${token}`,
+          },
+        });
+
+        if (!response.ok) {
+          alert('Gagal mengambil profil pengguna.');
+          window.location.href = '/public/user/login.html';
+          return;
+        }
+
+        const { result: user } = await response.json();
+        document.getElementById('username').value = user.username;
+        document.getElementById('email').value = user.email;
+        document.getElementById('phone').value = user.phone || '';
+        document.getElementById('address').value = user.address || '';
+        document.getElementById('date_birth').value = user.date_birth || '';
+        document.getElementById('relation_types').value = user.relation_types || '1';
+        document.getElementById('husband_name_input').value = user.husband_name || '';
+        document.getElementById('wife_name_input').value = user.wife_name || '';
+
+        navbarAuth.innerHTML = `
+          <a href="/public/user/profile.html" class="text-sm font-semibold text-blueGray-600 mr-4">Hello, ${user.username}!</a>
+          <button class="btn-accent hover-up-2" id="logout">Keluar</button>
+        `;
+        
+        document.getElementById('logout').addEventListener('click', () => {
+          localStorage.removeItem('token');
+          window.location.reload();
+        });
+
+        toggleFields(user.relation_types);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+        alert('Terjadi kesalahan saat mengambil data profil.');
+      }
+
+      // Add event listener to relation_types dropdown
+      document.getElementById('relation_types').addEventListener('change', (e) => {
+        toggleFields(e.target.value);
+      });
+
+      // Handle profile update submission
+      document.getElementById('updateProfileBtn').addEventListener('click', async () => {
+        const updatedUser = {
+          username: document.getElementById('username').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          address: document.getElementById('address').value,
+          date_birth: document.getElementById('date_birth').value,
+          relation_types: document.getElementById('relation_types').value,
+          husband_name: document.getElementById('husband_name_input').value,
+          wife_name: document.getElementById('wife_name_input').value,
+        };
+
+        // Clear unused fields based on relation type
+        if (updatedUser.relation_types === '1') {
+          updatedUser.wife_name = '';
+        } else if (updatedUser.relation_types === '2') {
+          updatedUser.husband_name = '';
+        }
+
+        try {
+          const updateResponse = await fetch(updateProfileUrl, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `${token}`,
+            },
+            body: JSON.stringify(updatedUser),
+          });
+
+          const updateResult = await updateResponse.json();
+
+          if (updateResponse.ok) {
+            alert('Profil berhasil diperbarui!');
+          } else {
+            alert(updateResult.msg || 'Gagal memperbarui profil.');
+          }
+        } catch (error) {
+          console.error('Error updating profile:', error);
+          alert('Terjadi kesalahan saat memperbarui profil.');
+        }
+      });
+    })
+    .catch((error) => console.error('Error loading configuration:', error));
+});
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add News</title>
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+  <style>
+    /* General styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form textarea {
+      resize: none;
+    }
+
+    .preview-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .image-preview {
+      max-width: 100%;
+      max-height: 300px;
+      border: 1px dashed #ddd;
+      border-radius: 8px;
+      margin-top: 10px;
+      object-fit: contain;
+    }
+
+    .btn-add-paragraph {
+      display: inline-block;
+      margin: 10px 0;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-add-paragraph:hover {
+      background-color: #218838;
+    }
+
+    .action-parahraph {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+    }
+
+    .remove-paragraph {
+      background-color: #dc3545;
+      color: white;
+      width: 25%;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .remove-paragraph:hover {
+      background-color: #a71d2a;
+    }
+
+    #author-results li {
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    #author-results li:hover {
+        background-color: #f0f0f0;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="sidebar-container"></div>
+  <div class="content">
+    <div class="form-container">
+      <h1>Add News</h1>
+      <form id="news-form">
+        <div>
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" placeholder="Enter news title" required>
+        </div>
+        <div>
+          <label for="sub_title">Sub Title</label>
+          <input type="text" id="sub_title" name="sub_title" placeholder="Enter news sub title" required>
+        </div>
+        <div>
+          <label for="category">Category</label>
+          <input type="text" id="category" name="category" placeholder="Enter news category" required>
+        </div>
+        <div>
+          <label for="release">Release Date</label>
+          <input type="date" id="release" name="release" required>
+        </div>
+        <div>
+          <label for="image">Upload Image</label>
+          <input type="file" id="image" name="image" accept="image/*">
+          <div class="preview-container">
+            <img id="image-preview" class="image-preview" src="" alt="Image Preview" style="display: none;">
+          </div>
+        </div>
+        <div>
+            <label for="author-search">Search Author</label>
+            <input type="text" id="author-search" name="author_search" placeholder="Search author by name">
+            <ul id="author-results" style="list-style: none; padding: 0; display: none; border: 1px solid #ccc; max-height: 150px; overflow-y: auto; background: #fff;"></ul>
+        </div>
+        <div>
+            <label for="author-name">Author Name</label>
+            <input type="text" id="author-name" name="author_name" readonly>
+        </div>
+        <div>
+            <label for="author-position">Author Position</label>
+            <input type="text" id="author-position" name="author_position" readonly>
+        </div>
+        <input type="hidden" id="author-id" name="author_id"> <!-- Hidden input -->        
+          
+        <div id="paragraphs">
+          <h3>Paragraphs</h3>
+          <div class="paragraph-container">
+            <textarea name="paragraph" rows="4" placeholder="Write a paragraph..."></textarea>
+          </div>
+        </div>
+        <button type="button" id="add-paragraph" class="btn-add-paragraph">Add Paragraph</button>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="/public/assets/js/sidebar.js"></script>
+  <script src="/public/assets/js/add-news.js"></script>
+</body>
+</html>

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <title>Sejoli Kasmaran</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Tailwind CSS Saas Landing Page" />
+    <meta name="author" content="sejolikasmaran.com" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/assets/imgs/logos/sejoli-kasmaran-logo.svg"
+    />
+    <link rel="stylesheet" href="style.css">
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="/public/assets/css/animate.min.css?v=2.0" />
+    <link rel="stylesheet" href="/public/assets/css/slick.css?v=2.0" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/public/assets/css/tailwind-built.css?v=2.0" />
+  </head>
+  <body class="bg-white text-body font-body">
+    <div class="main">
+      <!--Header-->
+      <header class="bg-transparent sticky-bar mt-4">
+        <div class="container bg-transparent">
+          <nav class="bg-transparent flex justify-between items-center py-3">
+            <a class="text-3xl font-semibold leading-none" href="index.html">
+              <img
+                class="h-10"
+                src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+              <li class="group relative pt-4 pb-4">
+                <a
+                  href="/public/"
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  >Beranda</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="hidden lg:block" id="navbar-auth">
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            </div>
+            <div class="lg:hidden">
+              <button
+                class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  viewbox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!--Mobile menu-->
+      <div class="hidden navbar-menu relative z-50 transition duration-300">
+        <div
+          class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"
+        ></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300"
+        >
+          <div class="flex items-center mb-8">
+            <a
+              class="mr-auto text-3xl font-semibold leading-none"
+              href="/public/"
+            >
+              <img
+                class="h-10"
+                src="assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewbox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul class="mobile-menu">
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/"
+                  >Beranda</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="mb-1 menu-item-has-children rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="mt-4 pt-6 border-t border-blueGray-100" id="navbar-auth">
+              <a
+                class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-400 hover:bg-blue-500 text-white rounded"
+                href="/public/user/login.html"
+                >Masuk</a
+              >
+              <a
+                class="block px-4 py-3 mb-2 text-xs text-center text-blue-500 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded"
+                href="/public/user/signup.html"
+                >Buat Akun</a
+              >
+            </div>
+          </div>
+          <div class="mt-auto">
+            <p class="my-4 text-xs text-blueGray-400">
+              <span>Kontak Kami!</span>
+              <a
+                class="text-blue-500 hover:text-blue-500 underline"
+                href="mailto:kontak.sejolikasmaran@gmail.com"
+                >kontak.sejolikasmaran@gmail.com</a
+              >
+            </p>
+            <a
+              class="inline-block px-1"
+              href="https://www.instagram.com/sejolikasmaran"
+            >
+              <img src="assets/imgs/icons/facebook-blue.svg" alt="" />
+            </a>
+            <a
+              class="inline-block px-1"
+              href="https://www.instagram.com/sejolikasmaran"
+            >
+              <img src="assets/imgs/icons/twitter-blue.svg" alt="" />
+            </a>
+            <a
+              class="inline-block px-1"
+              href="https://www.instagram.com/sejolikasmaran"
+            >
+              <img src="assets/imgs/icons/instagram-blue.svg" alt="" />
+            </a>
+          </div>
+        </nav>
+      </div>
+
+      <!--Hero-->
+      <section class="content-forum w-full flex justify-between min-h-screen container pt-10 pb-32">
+        <div class="flex flex-col w-full">
+          <div class="scrollable-content">
+          </div>
+        </div>
+        <div class="flex flex-col w-full">
+          <div class="mb-6">
+            <h2 class="font-semibold title-upload">What Do You Think About?</h2>
+            <textarea class="w-full text-border rounded p-3 field-txt mt-2" rows="4" placeholder="Text here"></textarea>
+            <div class="submit-forum mt-2">
+              <div class="img-input flex items-center gap-2">
+                <input type="file" id="imageInput" class="hidden" accept="image/*"/>
+                <svg id="triggerUpload" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer">
+                  <path d="M15 8V4H5V20H19V8H15ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918ZM11 9.5C11 10.3284 10.3284 11 9.5 11C8.67157 11 8 10.3284 8 9.5C8 8.67157 8.67157 8 9.5 8C10.3284 8 11 8.67157 11 9.5ZM17.5 17L13.5 10L8 17H17.5Z"></path>
+                </svg>
+                <p id="fileName"></p>
+              </div>
+              <button class="bg-blue-500 text-white">Upload</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Footer 2-->
+      <section class="relative footer-2 border-t border-gray-100">
+        <div
+          class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blueGray-50"
+        ></div>
+        <div class="container">
+          <div class="relative flex flex-wrap -mx-4">
+            <div
+              class="w-full lg:w-1/2 pt-20 px-4 max-w-lg lg:max-w-full mx-auto lg:mx-0 text-center lg:text-left"
+            >
+              <a
+                class="inline-block mx-auto lg:ml-0 text-3xl font-semibold leading-none wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".1s"
+                href="/public/index.html"
+              >
+                <img
+                  class="h-10"
+                  src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                  alt=""
+                />
+              </a>
+              <div class="mt-12 mb-16">
+                <p
+                  class="mb-4 text-xs text-blueGray-400 text-center lg:text-left wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  Berlangganan dan tetap terhubung sepenuhnya dengan Sejoli
+                  Kasmaran!
+                </p>
+                <div
+                  class="flex flex-wrap lg:flex-nowrap items-center wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <div
+                    class="flex w-full lg:w-2/3 mb-3 lg:mb-0 px-4 bg-blueGray-50 rounded"
+                  >
+                    <svg
+                      class="h-6 w-6 my-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewbox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      ></path>
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      ></path>
+                    </svg>
+                    <input
+                      class="w-full py-4 pl-3 text-xs text-blueGray-400 bg-blueGray-50 outline-none"
+                      type="text"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <button
+                    class="hover-up-2 w-full lg:w-auto py-4 px-8 lg:ml-6 text-xs text-white font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded"
+                    type="submit"
+                  >
+                    Buat Akun
+                  </button>
+                </div>
+              </div>
+              <div
+                class="hidden lg:block wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".5s"
+              >
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran .All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="relative w-full lg:w-1/2 px-4 pt-40 lg:pl-12">
+              <div class="flex flex-row flex-wrap justify-around mb-12">
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Tentang</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/about.html"
+                        >Tentang Kami</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Berita & Artikel</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services.html"
+                        >Layanan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/contact.html"
+                        >Kontak</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Fitur</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-calculator/health-calculator.html"
+                        >Kalkulator Prediksi Persalinan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-risk-score/pregnancy-risk.html"
+                        >Skor Risiko Kehamilan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/body-mass-index-calculator/health-calculator-2.html"
+                        >Kalkulator Indeks Masa Tubuh (IMT)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/live-chat/consultation-options.html"
+                        >Live Chat</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-journal/journal.html"
+                        >Jurnal Kehamilanku</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/study-corner.html"
+                        >Pojok Belajar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnant-women-community/coming-soon.html"
+                        >Komunitas Ibu Hamil</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/online-prenatal-yoga/live-yoga-notification.html"
+                        >Kelas Yoga & Relaksasi Prenatal Online</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-full lg:w-auto mb-4 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".5s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Blog</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Artikel Kesehatan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Ibu Hamil Berbagi Cerita</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lg:hidden text-center">
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran. All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End .main -->
+
+    <div id="detailModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
+      <div class="bg-white card rounded-lg shadow-lg overflow-hidden relative flex flex-col lg:flex-row">
+        <!-- Gambar -->
+        <div id="imageContainer" class="hidden">
+          <img id="modalImage" src="" alt="Post Image" class="object-cover">
+        </div>
+
+        <!-- Konten -->
+        <div id="contentSection" class="w-full px-6 py-3 flex flex-col overflow-y-auto">
+          <div class="headerContent w-full flex justify-between items-start">
+            <h3 id="modalTitle" class="text-2xl font-semibold mb-4">Post Title</h3>
+            <!-- <button id="closeDetailModal" class="text-gray-400 hover:text-gray-600">✕</button> -->
+          </div>
+          <div id="modalDescription" class="text-gray-700 overflow-y-auto pr-2">
+            Post description goes here.
+          </div>
+        </div>
+
+        <!-- Komentar -->
+        <div id="commentsSection" class="bg-gray-50">
+          <div class="flex flex-col w-full justify-between h-full">
+            <ul id="modalComments" class=""></ul>
+            <!-- Add Comment Section -->
+            <div class="w-full flex commentInput">
+              <input id="commentInput" class="w-full border-gray-300 rounded-lg px-6" placeholder="What Do You think..." />
+              <div class="flex items-center justify-end">
+                <button id="submitComment" class="bg-blue-500 text-white px-2 py-2 rounded hover:bg-blue-600">Submit</button>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+      <div class="preloader flex-1 content-center">
+        <div class="logo absolute inset-y-2/4 jump">
+          <img
+            src="/public/assets/imgs/logos/sejoli-kasmaran-preloader.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!--Import Vendor Js-->
+    <script src="/public/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/waypoints.js"></script>
+    <script src="/public/assets/js/vendor/counterup.js"></script>
+    <script src="/public/assets/js/vendor/slick.js"></script>
+    <script src="/public/assets/js/vendor/wow.js"></script>
+    <script src="/public/assets/js/vendor/scrollup.js"></script>
+    <script src="/public/assets/js/vendor/smooth.js"></script>
+    <script src="/public/assets/js/vendor/textType.js"></script>
+    <script src="/public/assets/js/vendor/mobile-menu.js"></script>
+    <script src="/public/assets/js/main.js?v=2.0"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const forumContainer = document.querySelector('.scrollable-content');
+  const detailModal = document.getElementById('detailModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalComments = document.getElementById('modalComments');
+  const commentInput = document.getElementById('commentInput');
+  const submitCommentButton = document.getElementById('submitComment');
+  const navbarAuth = document.getElementById('navbar-auth');
+  const imageInput = document.getElementById('imageInput');
+  const postButton = document.querySelector('.submit-forum button');
+  const textArea = document.querySelector('.field-txt');
+  const triggerUpload = document.getElementById('triggerUpload');
+  const fileName = document.getElementById('fileName');
+  let apiBaseUrl = '';
+  let apiImgUrl = '';
+  let currentPostingId = null; 
+
+  
+  fetch('/public/config.json')
+    .then((response) => response.json())
+    .then((config) => {
+      apiBaseUrl = config.API_BASE_URL;
+      apiImgUrl = config.API_IMAGE_URL;
+
+      fetchUserProfile();
+      fetchForumPosts();
+    })
+    .catch((error) => console.error('Error fetching config:', error));
+
+  
+  async function fetchUserProfile() {
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      window.location.href = '/public/user/login.html';
+      return;
+    }
+
+    try {
+      const response = await fetch(`${apiBaseUrl}/auth/profile`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const { result } = await response.json();
+        localStorage.setItem("userId", result.id);
+        navbarAuth.innerHTML = `
+          <span class="text-sm font-semibold text-blueGray-600 mr-4">Hello, ${result.username}!</span>
+          <button class="btn-accent hover-up-2" id="logout">Logout</button>
+        `;
+
+        document.getElementById('logout').addEventListener('click', () => {
+          localStorage.removeItem('token');
+          window.location.reload();
+        });
+      } else {
+        window.location.href = '/public/user/login.html';
+      }
+    } catch (error) {
+      console.error('Error fetching profile:', error);
+      window.location.href = '/public/user/login.html';
+    }
+  }
+
+  
+  async function fetchForumPosts() {
+    const token = localStorage.getItem('token');
+    try {
+      const response = await fetch(`${apiBaseUrl}/posting`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const { result: posts } = await response.json();
+        renderForumPosts(posts);
+      } else {
+        console.error('Failed to fetch forum posts');
+      }
+    } catch (error) {
+      console.error('Error fetching forum posts:', error);
+    }
+  }
+
+  
+  function renderForumPosts(posts) {
+  forumContainer.innerHTML = ''; // Hapus semua konten sebelumnya
+  posts.forEach(async (post) => {
+    const card = document.createElement('div');
+    card.className = 'card-forum mb-6';
+    card.setAttribute('data-id', post.id);
+
+    const isLiked = await checkIfLiked(post.id); // Periksa apakah user telah like post
+    const likeColor = isLiked ? '#f56565' : 'black'; // Warna icon like berdasarkan status
+
+    const bodyContent = post.img_path
+      ? `<img src="${apiImgUrl}/${post.img_path}" alt="${post.title}" class="img-forum">`
+      : `<p>${truncateText(post.desc, 100)}</p>`;
+
+    card.innerHTML = `
+      <div class="header-card-forum p-4">
+        <div class="header-info">
+          <h4>${post.User.username}</h4>
+          <span class="more-info">
+            <p>${post.createdAt.split('T')[0]}</p>
+          </span>
+        </div>
+        <h2 class="font-semibold">${post.title}</h2>
+      </div>
+      <div class="body-card-forum p-4">
+        ${bodyContent}
+      </div>
+      <div class="footer-card-forum p-4 flex items-center">
+        <button class="btn-like mr-4 flex items-center" data-liked="${isLiked}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 24 24" fill="currentColor" style="color: ${likeColor};">
+            <path d="M12.001 4.52853C14.35 2.42 17.98 2.49 20.2426 4.75736C22.5053 7.02472 22.583 10.637 20.4786 12.993L11.9999 21.485L3.52138 12.993C1.41705 10.637 1.49571 7.01901 3.75736 4.75736C6.02157 2.49315 9.64519 2.41687 12.001 4.52853Z"></path>
+          </svg>
+          <p class="ml-2">${post.count_like || 0}</p>
+        </button>
+        <button class="btn-comment flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.29117 20.8242L2 22L3.17581 16.7088C2.42544 15.3056 2 13.7025 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C10.2975 22 8.6944 21.5746 7.29117 20.8242ZM7.58075 18.711L8.23428 19.0605C9.38248 19.6745 10.6655 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 13.3345 4.32549 14.6175 4.93949 15.7657L5.28896 16.4192L4.63416 19.3658L7.58075 18.711Z"></path>
+          </svg>
+        </button>
+      </div>
+    `;
+
+    // Event listener untuk tombol like
+    const likeButton = card.querySelector('.btn-like');
+    likeButton.addEventListener('click', async (event) => {
+      event.stopPropagation(); // Hindari trigger event pada card
+      await toggleLike(post.id, likeButton); // Toggle like state
+    });
+
+    // Event listener untuk membuka detail modal
+    card.addEventListener('click', () => {
+      fetchJournalDetails(post.id);
+    });
+
+    forumContainer.appendChild(card);
+  });
+}
+ 
+  async function checkIfLiked(postingId) {
+    const token = localStorage.getItem('token');
+    try {
+      const response = await fetch(`${apiBaseUrl}/like/${postingId}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const { result } = await response.json();
+        const userId = localStorage.getItem('userId');
+        return result.some((like) => like.userId == userId);
+      }
+    } catch (error) {
+      console.error('Error checking like status:', error);
+    }
+  }
+
+  
+  async function toggleLike(postingId, button) {
+    const token = localStorage.getItem('token');
+    const isLiked = button.getAttribute('data-liked') === 'true';
+    const likeCountElement = button.querySelector('p');
+    let likeCount = parseInt(likeCountElement.textContent);
+
+    try {
+      const response = await fetch(`${apiBaseUrl}/like`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `${token}`,
+        },
+        body: JSON.stringify({ posting_id: postingId }),
+      });
+
+      if (response.ok) {
+        button.setAttribute('data-liked', !isLiked);
+        likeCount = isLiked ? likeCount - 1 : likeCount + 1;
+        likeCountElement.textContent = likeCount;
+        button.querySelector('svg').style.color = !isLiked ? '#f56565' : 'black';
+      } else {
+        console.error('Failed to toggle like');
+      }
+    } catch (error) {
+      console.error('Error toggling like:', error);
+    }
+  }
+
+  
+  async function fetchJournalDetails(journalId) {
+    currentPostingId = journalId; 
+    const token = localStorage.getItem('token');
+    try {
+      const response = await fetch(`${apiBaseUrl}/posting/${journalId}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const { result } = await response.json();
+        const comments = await fetchComments(journalId);
+
+        openDetailModal(
+          `${apiImgUrl}/${result.img_path}`,
+          result.title,
+          result.desc,
+          comments
+        );
+      } else {
+        console.error('Failed to fetch journal details');
+      }
+    } catch (error) {
+      console.error('Error fetching journal details:', error);
+    }
+  }
+
+  
+  async function fetchComments(postingId) {
+    const token = localStorage.getItem('token');
+    try {
+      const response = await fetch(`${apiBaseUrl}/comment/posting/${postingId}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const { result } = await response.json();
+        return result;
+      } else {
+        console.error('Failed to fetch comments');
+        return [];
+      }
+    } catch (error) {
+      console.error('Error fetching comments:', error);
+      return [];
+    }
+  }
+
+  
+  function openDetailModal(imageUrl, title, description, comments) {
+  const detailModal = document.getElementById('detailModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalComments = document.getElementById('modalComments');
+  const imageContainer = document.getElementById('imageContainer');
+
+  // Cek apakah ada gambar atau tidak
+  if (imageUrl) {
+    imageContainer.classList.remove('hidden'); // Tampilkan gambar jika ada
+    modalImage.src = imageUrl;
+  } else {
+    imageContainer.classList.add('hidden'); // Sembunyikan gambar jika tidak ada
+    modalImage.src = ''; // Reset src gambar
+  }
+
+  // Set title dan description
+  modalTitle.textContent = title || 'Untitled';
+  modalDescription.textContent = description || 'No description provided.';
+
+  // Render comments di modal
+  modalComments.innerHTML = comments.length
+    ? comments
+        .map(
+          (comment) => `
+        <li class="p-3 mb-6 border border-gray-200 rounded">
+          <strong>${comment.User.username || 'Anonymous'}</strong>
+          <p>${comment.content || ''}</p>
+        </li>`
+        )
+        .join('')
+    : '<p class="text-gray-500">No comments yet.</p>';
+
+  // Tampilkan modal
+  detailModal.classList.remove('hidden');
+}
+
+
+  
+  submitCommentButton.addEventListener('click', async () => {
+    const content = commentInput.value.trim();
+
+    if (!content) {
+      alert('Please write a comment before submitting!');
+      return;
+    }
+
+    const token = localStorage.getItem('token');
+    try {
+      const response = await fetch(`${apiBaseUrl}/comment`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `${token}`,
+        },
+        body: JSON.stringify({ content, posting_id: currentPostingId }),
+      });
+
+      if (response.ok) {
+        commentInput.value = '';
+        const comments = await fetchComments(currentPostingId); 
+        modalComments.innerHTML = comments
+          .map(
+            (comment) => `
+          <li class="p-3 mb-6 border border-gray-200 rounded">
+            <strong>${comment.User.username || 'Anonymous'}</strong>
+            <p>${comment.content || ''}</p>
+          </li>`
+          )
+          .join('');
+      } else {
+        console.error('Failed to post comment');
+      }
+    } catch (error) {
+      console.error('Error posting comment:', error);
+    }
+  });
+
+  
+  detailModal.addEventListener('click', (event) => {
+    if (event.target === detailModal) {
+      detailModal.classList.add('hidden');
+    }
+  });
+
+  postButton.addEventListener('click', async () => {
+        await uploadPost();
+      });
+
+      
+      triggerUpload.addEventListener('click', () => {
+        imageInput.click(); 
+      });
+
+      
+      imageInput.addEventListener('change', () => {
+        if (imageInput.files.length > 0) {
+          const file = imageInput.files[0];
+
+          if (file.type.startsWith('image/')) {
+            fileName.textContent = file.name; 
+          } else {
+            alert('File tidak valid, harap unggah gambar!');
+            imageInput.value = ''; 
+            fileName.textContent = 'No file selected'; 
+          }
+        } else {
+          fileName.textContent = 'No file selected';
+        }
+      });
+
+      async function uploadPost() {
+    const file = imageInput.files[0];
+    const text = textArea.value.trim();
+    const token = localStorage.getItem('token');
+
+    if (!text) {
+      alert('Please write some content for your post!');
+      return;
+    }
+
+    if (!file) {
+      alert('Please upload an image!');
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append('title', truncateText(text, 50)); 
+    formData.append('desc', text); 
+    formData.append('img_path', file); 
+
+    try {
+      const response = await fetch(`${apiBaseUrl}/posting`, {
+        method: 'POST',
+        headers: {
+          Authorization: `${token}`, 
+        },
+        body: formData, 
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert('Your post has been submitted successfully!');
+        window.location.reload(); 
+      } else {
+        console.error('Failed to create post:', result.msg);
+        alert(result.msg || 'Failed to create a post.');
+      }
+    } catch (error) {
+      console.error('Error creating post:', error);
+      alert('An error occurred. Please try again later.');
+    }
+  }
+
+  
+  function truncateText(text, maxLength) {
+    return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
+  }
+});
+  </script>    
+  </body>
+</html>

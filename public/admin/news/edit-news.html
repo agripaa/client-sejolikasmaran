@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit News</title>
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+</head>
+<body>
+  <div id="sidebar-container"></div>
+  <div class="content">
+    <div class="form-container">
+      <h1>Edit News</h1>
+      <form id="news-form">
+        <div>
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required>
+        </div>
+        <div>
+          <label for="sub_title">Sub Title</label>
+          <input type="text" id="sub_title" name="sub_title" required>
+        </div>
+        <div>
+          <label for="category">Category</label>
+          <input type="text" id="category" name="category" required>
+        </div>
+        <div>
+          <label for="release">Release Date</label>
+          <input type="date" id="release" name="release" required>
+        </div>
+        <div>
+            <label for="current-image">Current Image</label>
+            <img id="current-image" src="" alt="Current News Image" style="max-width: 200px; display: block;">
+        </div>        
+        <div>
+            <label for="image">Upload New Image</label>
+            <input type="file" id="image" name="image">
+        </div>  
+        <div id="paragraphs">
+          <h3>Paragraphs</h3>
+          <!-- Paragraphs will be dynamically loaded here -->
+        </div>
+        <button type="button" id="add-paragraph" class="btn-add-paragraph">Add Paragraph</button>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+  <script src="/public/assets/js/sidebar.js"></script>
+  <script src="/public/assets/js/edit-news.js"></script>
+</body>
+</html>
