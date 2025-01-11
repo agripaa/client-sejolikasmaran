@@ -614,6 +614,7 @@
                   'Content-Type': 'application/json',
                   'Authorization': `${token}`,
                 },
+                mode:"no-cors",
               });
 
               const result = await response.json();
@@ -699,6 +700,7 @@
           try {
             const response = await fetch(registerUrl, {
               method: 'POST',
+              mode:"no-cors",
               headers: {
                 'Content-Type': 'application/json',
               },

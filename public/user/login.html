@@ -638,6 +638,7 @@
             try {
               const response = await fetch(profilUrl, {
                 method: 'GET',
+                mode:"no-cors",
                 headers: {
                   'Content-Type': 'application/json',
                   'Authorization': `${token}`,
@@ -690,6 +691,7 @@
               const password = document.getElementById('password').value;
               
               const response = await fetch(`${loginUrl}`, {
+                mode:"no-cors",
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
