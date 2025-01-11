@@ -257,7 +257,7 @@
                 >
               </li>
             </ul>
-            <div class="mt-4 pt-6 border-t border-blueGray-100 block lg:hidden" id="navbar-auth">
+            <div class="mt-4 pt-6 border-t border-blueGray-100 block lg:hidden" id="navbar-auth-mobile">
               <a
                 class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-400 hover:bg-blue-500 text-white rounded"
                 href="/public/user/login.html"
@@ -688,11 +688,9 @@
               const profileData = await profileResponse.json();
               const userId = profileData.result.id;
 
-              console.log({profileData: profileData.result.born_date})
 
               if (profileData.result.born_date) {
-                bornDateInput.value = new Date(data.born_date).toISOString().split('T')[0]; // Format ke YYYY-MM-DD
-                console.log({borndate: bornDateInput?.value})
+                bornDateInput.value = new Date(data.born_date).toISOString().split('T')[0]; 
               }
 
               const journalResponse = await fetch(journalUrl, {
@@ -742,7 +740,6 @@
                   timeline.innerHTML += trimesterElement;
               });
 
-              // Fetch Checked Status
               const checkedResponse = await fetch(checkedUrl, {
                 headers: {
                   'Content-Type': 'application/json',
