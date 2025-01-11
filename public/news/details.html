@@ -670,7 +670,7 @@
     });
 
       document.addEventListener('DOMContentLoaded', async () => {
-        const configResponse = await fetch('./public/config.json');
+        const configResponse = await fetch('/public/config.json');
         const config = await configResponse.json();
 
         const apiBaseUrl = config.API_BASE_URL;

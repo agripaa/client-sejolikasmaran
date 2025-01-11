@@ -704,7 +704,7 @@
     <script src="/public/assets/js/main.js?v=2.0"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        fetch('./public/config.json')
+        fetch('/public/config.json')
           .then((response) => response.json())
           .then(async (config) => {
             const apiBaseUrl = config.API_BASE_URL;
