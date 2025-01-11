@@ -691,7 +691,6 @@
               const password = document.getElementById('password').value;
               
               const response = await fetch(`${loginUrl}`, {
-                mode:"no-cors",
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
