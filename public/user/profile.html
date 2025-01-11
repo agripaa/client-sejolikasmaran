@@ -601,7 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Fetch profile and populate form
-  fetch('../config.json')
+  fetch('./public/config.json')
     .then((response) => response.json())
     .then(async (config) => {
       const apiBaseUrl = config.API_BASE_URL;

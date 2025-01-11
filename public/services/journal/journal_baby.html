@@ -629,7 +629,7 @@
             return;
           }
 
-          const apiBaseUrl = (await fetch('../../config.json').then((res) => res.json())).API_BASE_URL;
+          const apiBaseUrl = (await fetch('/public/config.json').then((res) => res.json())).API_BASE_URL;
           const journalUrl = `${apiBaseUrl}/baby_journal/add-born`;
 
           try {
@@ -654,7 +654,7 @@
           }
         });
 
-        fetch('../../config.json')
+        fetch('/public/config.json')
         .then((response) => response.json())
         .then(async (config) => {
           const apiBaseUrl = config.API_BASE_URL;
@@ -663,6 +663,7 @@
           const checkedUrl = `${apiBaseUrl}/checked`;
           const token = localStorage.getItem('token');
           const navbarAuth = document.getElementById('navbar-auth');
+          const navbarAuthMobile = document.getElementById('navbar-auth-mobile');
           
           const bornDateInput = document.getElementById('bornDateTime');
 
@@ -805,6 +806,20 @@
                 <a href="/public/user/profile.html" class="text-sm font-semibold text-blueGray-600 mr-4">Hello, ${username}!</a>
                 <button class="btn-accent hover-up-2" id="logout">Keluar</button>
               `;
+
+              navbarAuthMobile.innerHTML = `
+                <a href="/public/user/profile.html" class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-400 hover:bg-blue-500 text-white rounded">
+                  Hello, ${username}!
+                </a>
+                <button class="block px-4 py-3 mb-2 text-xs text-center text-blue-500 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" id="logout-mobile">
+                  Keluar
+                </button>
+              `;
+
+              document.getElementById('logout-mobile').addEventListener('click', () => {
+                localStorage.removeItem('token');
+                window.location.reload();
+              });
 
               document.getElementById('logout').addEventListener('click', () => {
                 localStorage.removeItem('token');

@@ -596,7 +596,7 @@
     <script src="/public/assets/js/main.js?v=2.0"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-      fetch('../../config.json')
+      fetch('/public/config.json')
         .then((response) => response.json())
         .then(async (config) => {
           const apiBaseUrl = config.API_BASE_URL;
@@ -737,6 +737,22 @@
 
             const profileResult = await response.json();
             const username = profileResult.result.username;
+
+            const navbarAuthMobile = document.getElementById('navbar-auth-mobile');
+
+            navbarAuthMobile.innerHTML = `
+                <a href="/public/user/profile.html" class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-400 hover:bg-blue-500 text-white rounded">
+                  Hello, ${username}!
+                </a>
+                <button class="block px-4 py-3 mb-2 text-xs text-center text-blue-500 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" id="logout-mobile">
+                  Keluar
+                </button>
+              `;
+
+              document.getElementById('logout-mobile').addEventListener('click', () => {
+                localStorage.removeItem('token');
+                window.location.reload();
+              });
 
             navbarAuth.innerHTML = `
               <a href="/public/user/profile.html" class="text-sm font-semibold text-blueGray-600 mr-4">Hello, ${username}!</a>
