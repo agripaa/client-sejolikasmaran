@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let isEdit = false;
   let editId = null;
 
-  function showLoading() {
-      document.getElementById("loading-spinner").classList.remove("hidden");
-  }
+  // function showLoading() {
+  //     document.getElementById("loading-spinner").classList.remove("hidden");
+  // }
 
-  function hideLoading() {
-      document.getElementById("loading-spinner").classList.add("hidden");
-  }
+  // function hideLoading() {
+  //     document.getElementById("loading-spinner").classList.add("hidden");
+  // }
 
   fetch('/public/config.json')
       .then(response => response.json())
@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
           form.addEventListener("submit", async (e) => {
               e.preventDefault();
               const formData = new FormData(form);
-              showLoading(); // Tampilkan loading spinner
 
               try {
                   const url = isEdit
@@ -73,8 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
                   }
               } catch (error) {
                   console.error("Error saving detail:", error);
-              } finally {
-                  hideLoading(); // Sembunyikan loading spinner setelah proses selesai
               }
           });
 
