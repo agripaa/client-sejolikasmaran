@@ -6,12 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const addParagraphBtn = document.getElementById('add-paragraph');
     const paragraphsContainer = document.getElementById('paragraphs');
 
-    // Elements for author search
+    // Elements for author
     const authorSearchInput = document.getElementById('author-search');
     const authorResults = document.getElementById('author-results');
     const authorNameInput = document.getElementById('author-name');
     const authorPositionInput = document.getElementById('author-position');
     const authorIdInput = document.getElementById('author-id');
+    const authorSection = document.getElementById('author-section');
 
     fetch('/public/config.json')
         .then((response) => response.json())
@@ -34,10 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     const releaseDate = new Date(result.release).toISOString().split('T')[0];
                     document.getElementById('release').value = releaseDate;
 
+                    // Display author details if exists
                     if (result.author) {
                         authorNameInput.value = result.author.name;
                         authorPositionInput.value = result.author.position;
                         authorIdInput.value = result.author.id;
+                        authorSearchInput.style.display = 'none'; // Hide author search input
+                        authorResults.style.display = 'none';
+                    } else {
+                        authorSection.style.display = 'block'; // Show author search if no author found
                     }
 
                     if (result.img_news) {
@@ -61,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <button type="button" class="btn btn-danger remove-paragraph" data-id="${paragraph.id}">Remove Paragraph</button>
                                 `;
                                 paragraphsContainer.appendChild(paragraphContainer);
-                            
+
                                 paragraphContainer.querySelector('.remove-paragraph').addEventListener('click', async (e) => {
                                     const paragraphId = e.target.getAttribute('data-id');
                                     if (paragraphId) {
@@ -87,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         paragraphContainer.remove();
                                     }
                                 });
-                            });                            
+                            });
                         })
                         .catch((err) => {
                             console.error('Error fetching paragraphs:', err);
