@@ -36,6 +36,21 @@
             <label for="image">Upload New Image</label>
             <input type="file" id="image" name="image">
         </div>  
+        <div>
+          <label for="author-search">Search Author</label>
+          <input type="text" id="author-search" name="author_search" placeholder="Search author by name">
+          <ul id="author-results" style="list-style: none; padding: 0; display: none; border: 1px solid #ccc; max-height: 150px; overflow-y: auto; background: #fff;"></ul>
+      </div>
+      <div>
+          <label for="author-name">Author Name</label>
+          <input type="text" id="author-name" name="author_name" readonly>
+      </div>
+      <div>
+          <label for="author-position">Author Position</label>
+          <input type="text" id="author-position" name="author_position" readonly>
+      </div>
+      <input type="hidden" id="author-id" name="author_id"> <!-- Hidden input -->
+      
         <div id="paragraphs">
           <h3>Paragraphs</h3>
           <!-- Paragraphs will be dynamically loaded here -->
