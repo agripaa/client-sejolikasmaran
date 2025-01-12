@@ -131,43 +131,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     await fetch(`${apiBaseUrl}/news/${newsId}`, {
                         method: 'PATCH',
                         headers: { 
-                            'Authorization': token, 
-                            'Content-Type': 'application/json',
+                            'Authorization': token
                         },
                         body: formData,
                     });
             
-                    // Update and insert paragraphs
                     await Promise.all(
-                        paragraphs.map((paragraph) => {
-                            if (paragraph.id) {
-                                // Update existing paragraph
-                                return fetch(`${apiBaseUrl}/news_content/content/${paragraph.id}`, {
-                                    method: 'PATCH',
-                                    headers: {
-                                        'Content-Type': 'application/json',
-                                        'Authorization': token,
-                                    },
-                                    body: JSON.stringify({
-                                        paragraph: paragraph.paragraph,
-                                        position: paragraph.position,
-                                    }),
-                                });
-                            } else {
-                                // Insert new paragraph
-                                return fetch(`${apiBaseUrl}/news_content/${newsId}/content`, {
-                                    method: 'POST',
-                                    headers: {
-                                        'Content-Type': 'application/json',
-                                        'Authorization': token,
-                                    },
-                                    body: JSON.stringify({
-                                        paragraph: paragraph.paragraph,
-                                        position: paragraph.position,
-                                    }),
-                                });
-                            }
-                        })
+                        paragraphs.map((paragraph) =>
+                            fetch(`${apiBaseUrl}/news_content/${newsId}/content`, {
+                                method: paragraph.id ? 'PATCH' : 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Authorization': token,
+                                },
+                                body: JSON.stringify({
+                                    paragraph: paragraph.paragraph,
+                                    position: paragraph.position,
+                                }),
+                            })
+                        )
                     );
             
                     alert('News updated successfully.');
