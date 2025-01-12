@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       function displayNews(newsList) {
           newsListElement.innerHTML = newsList
             .map((news) => {
+              console.log({news})
               const urlImageNews = apiImageUrl + news.img_news;
               return `
               <div class="news-item">
