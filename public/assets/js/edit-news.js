@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     await fetch(`${apiBaseUrl}/news/${newsId}`, {
                         method: 'PATCH',
                         headers: { 
-                            'Authorization': `${token}`, 
+                            'Authorization': token, 
                             'Content-Type': 'application/json',
                         },
                         body: formData,
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     method: 'PATCH',
                                     headers: {
                                         'Content-Type': 'application/json',
-                                        'Authorization': `${token}`,
+                                        'Authorization': token,
                                     },
                                     body: JSON.stringify({
                                         paragraph: paragraph.paragraph,
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     method: 'POST',
                                     headers: {
                                         'Content-Type': 'application/json',
-                                        'Authorization': `${token}`,
+                                        'Authorization': token,
                                     },
                                     body: JSON.stringify({
                                         paragraph: paragraph.paragraph,
