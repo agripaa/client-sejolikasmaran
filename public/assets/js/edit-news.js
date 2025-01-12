@@ -109,13 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const imgNews = imgInput && imgInput.files[0];
             
                 const paragraphs = Array.from(document.querySelectorAll('textarea[name="paragraph"]')).map((textarea, index) => ({
-                    id: textarea.getAttribute('data-id'), // Ambil ID dari data-id
+                    id: textarea.getAttribute('data-id') || null, // Pastikan data-id ada
                     paragraph: textarea.value.trim(),
                     position: index + 1,
                 }));
             
-                if (paragraphs.some((p) => !p.paragraph)) {
-                    alert('All paragraphs must be filled.');
+                if (!title || !subTitle || !category || !release) {
+                    alert('All fields must be filled.');
                     return;
                 }
             
@@ -127,18 +127,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (imgNews) formData.append('image', imgNews);
             
                 try {
-                    // Update news
-                    await fetch(`${apiBaseUrl}/news/${newsId}`, {
+                    const newsResponse = await fetch(`${apiBaseUrl}/news/${newsId}`, {
                         method: 'PATCH',
-                        headers: { 
-                            'Authorization': token
+                        headers: {
+                            'Authorization': token,
                         },
                         body: formData,
                     });
             
+                    if (!newsResponse.ok) {
+                        const errorData = await newsResponse.json();
+                        throw new Error(errorData.msg || 'Failed to update news.');
+                    }
+            
                     await Promise.all(
-                        paragraphs.map((paragraph) =>
-                            fetch(`${apiBaseUrl}/news_content/${newsId}/content`, {
+                        paragraphs.map((paragraph) => {
+                            const endpoint = paragraph.id
+                                ? `${apiBaseUrl}/news_content/content/${paragraph.id}`
+                                : `${apiBaseUrl}/news_content/${newsId}/content`;
+            
+                            return fetch(endpoint, {
                                 method: paragraph.id ? 'PATCH' : 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -148,17 +156,16 @@ document.addEventListener('DOMContentLoaded', () => {
                                     paragraph: paragraph.paragraph,
                                     position: paragraph.position,
                                 }),
-                            })
-                        )
+                            });
+                        })
                     );
             
                     alert('News updated successfully.');
                     window.location.href = '/public/admin/news/';
                 } catch (error) {
                     console.error('Error updating news:', error);
-                    alert('Failed to update news.');
+                    alert(error.message || 'Failed to update news.');
                 }
-            });
-            
+            });            
         });
 });
