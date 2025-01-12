@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('release').value = releaseDate;
 
                     // Display author details if exists
-                    if (result.author) {
-                        authorNameInput.value = result.author.name;
-                        authorPositionInput.value = result.author.position;
-                        authorIdInput.value = result.author.id;
+                    if (result.Author) {
+                        authorNameInput.value = result.Author.name;
+                        authorPositionInput.value = result.Author.position;
+                        authorIdInput.value = result.Author.id;
                         authorSearchInput.style.display = 'none'; // Hide author search input
                         authorResults.style.display = 'none';
                     } else {
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     fetch(`${apiBaseUrl}/news_content/${newsId}/content`, {
                         method: 'GET',
                         headers: {
-                            'Authorization': `${token}`,
+                            'Authorization': token,
                         },
                     })
                         .then((response) => response.json())
