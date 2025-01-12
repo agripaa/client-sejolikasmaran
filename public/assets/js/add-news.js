@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             alert('Artikel sudah di tambahkan!');
-            window.location.href = '/public/admin/news/preview-news.html';
+            window.location.href = '/public/admin/news/';
           } catch (error) {
             console.error('Error adding news and paragraphs:', error);
             alert('Something went wrong. Please try again later.');

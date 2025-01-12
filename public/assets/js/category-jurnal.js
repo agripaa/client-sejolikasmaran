@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             : `${baseUrl}/journal`;
           const method = isEdit ? "PATCH" : "POST";
 
+          console.log({method, url})
           const response = await fetch(url, {
             method,
             headers: {
@@ -45,7 +46,11 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify(payload),
           });
 
+          console.log({response})
+
           const data = await response.json();
+
+          console.log({data})
 
           if (data.status === 201 || data.status === 200) {
             Swal.fire({

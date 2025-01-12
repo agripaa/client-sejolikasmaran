@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     );
 
                     alert('News updated successfully.');
-                    window.location.href = '/public/admin/news/preview-news.html';
+                    window.location.href = '/public/admin/news/';
                 } catch (error) {
                     console.error('Error updating news:', error);
                     alert('Failed to update news.');
