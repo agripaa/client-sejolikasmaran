@@ -130,7 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Update news
                     await fetch(`${apiBaseUrl}/news/${newsId}`, {
                         method: 'PATCH',
-                        headers: { 'Authorization': `${token}` },
+                        headers: { 
+                            'Authorization': `${token}`, 
+                            'Content-Type': 'application/json',
+                        },
                         body: formData,
                     });
             
