@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         authorNameInput.value = result.Author.name;
                         authorPositionInput.value = result.Author.position;
                         authorIdInput.value = result.Author.id;
-                        authorSearchInput.style.display = 'none'; // Hide author search input
+                        authorSearchInput.style.display = 'block'; // Hide author search input
                         authorResults.style.display = 'none';
                     } else {
                         authorSection.style.display = 'block'; // Show author search if no author found
