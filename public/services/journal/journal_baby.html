@@ -688,11 +688,16 @@
 
               const profileData = await profileResponse.json();
               const userId = profileData.result.id;
+              const bornDate = profileData.result.born_date;
 
-
-              if (profileData.result.born_date) {
-                bornDateInput.value = new Date(data.born_date).toISOString().split('T')[0]; 
+              console.log({profileData})
+              console.log(new Date(bornDate).toISOString().split('T'))
+              if (bornDate) {
+                const dateObj = new Date(bornDate);
+                const formattedDate = dateObj.toISOString().slice(0, 16);
+                bornDateInput.value = formattedDate;
               }
+              console.log({bornDate: bornDateInput.value})
 
               const journalResponse = await fetch(journalUrl, {
                 headers: {
