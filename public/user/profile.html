@@ -586,7 +586,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const husbandField = document.getElementById('husband_name');
   const wifeField = document.getElementById('wife_name');
 
-  // Function to toggle fields based on relation type
   function toggleFields(relationType) {
     if (relationType === '1' || relationType === 1) {
       husbandField.style.display = 'block';
@@ -600,7 +599,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Fetch profile and populate form
   fetch('/public/config.json')
     .then((response) => response.json())
     .then(async (config) => {
@@ -673,25 +671,22 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Terjadi kesalahan saat mengambil data profil.');
       }
 
-      // Add event listener to relation_types dropdown
       document.getElementById('relation_types').addEventListener('change', (e) => {
         toggleFields(e.target.value);
       });
 
-      // Handle profile update submission
       document.getElementById('updateProfileBtn').addEventListener('click', async () => {
         const updatedUser = {
           username: document.getElementById('username').value,
           email: document.getElementById('email').value,
           phone: document.getElementById('phone').value,
           address: document.getElementById('address').value,
-          date_birth: document.getElementById('date_birth').value,
           relation_types: document.getElementById('relation_types').value,
+          date_birth: document.getElementById('date_birth').value,
           husband_name: document.getElementById('husband_name_input').value,
           wife_name: document.getElementById('wife_name_input').value,
         };
 
-        // Clear unused fields based on relation type
         if (updatedUser.relation_types === '1') {
           updatedUser.wife_name = '';
         } else if (updatedUser.relation_types === '2') {
@@ -712,6 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (updateResponse.ok) {
             alert('Profil berhasil diperbarui!');
+            window.location.href = '/public/'
           } else {
             alert(updateResult.msg || 'Gagal memperbarui profil.');
           }
