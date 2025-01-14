@@ -1,4 +1,13 @@
+function showLoader() {
+  document.getElementById('loader').style.display = 'flex';
+}
+
+function hideLoader() {
+  document.getElementById('loader').style.display = 'none';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    hideLoader();
     const authorSearchInput = document.getElementById('author-search');
     const authorResults = document.getElementById('author-results');
     const authorNameInput = document.getElementById('author-name');
@@ -24,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                    // Preview image on file input change
                     imageInput.addEventListener('change', (event) => {
                       const file = event.target.files[0];
                       if (file) {
@@ -63,9 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             li.addEventListener('click', () => {
                                 authorNameInput.value = li.dataset.name;
                                 authorPositionInput.value = li.dataset.position;
-                                authorIdInput.value = li.dataset.id; // Set author_id to hidden input
+                                authorIdInput.value = li.dataset.id; 
                                 authorResults.style.display = 'none';
-                                authorSearchInput.value = ''; // Clear search input
+                                authorSearchInput.value = ''; 
                             });
                         });
   
@@ -114,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
   
         form.addEventListener('submit', async (e) => {
+          showLoader()
           e.preventDefault();
   
           const title = document.getElementById('title').value;
@@ -194,6 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
           } catch (error) {
             console.error('Error adding news and paragraphs:', error);
             alert('Something went wrong. Please try again later.');
+          } finally {
+            showLoader()
           }
         });
       })

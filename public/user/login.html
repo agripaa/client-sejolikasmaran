@@ -612,6 +612,11 @@
         </div>
       </div>
     </div>
+
+    <div id="loader">
+      <div class="spinner-border animate-spin"></div>
+    </div>
+    
     <!--Import Vendor Js-->
     <script src="/public/assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="/public/assets/js/vendor/jquery-3.6.0.min.js"></script>
@@ -625,7 +630,15 @@
     <script src="/public/assets/js/vendor/mobile-menu.js"></script>
     <script src="/public/assets/js/main.js?v=2.0"></script>
     <script>
-document.addEventListener('DOMContentLoaded', () => {
+    function showLoader() {
+      document.getElementById('loader').style.display = 'flex';
+    }
+
+    function hideLoader() {
+      document.getElementById('loader').style.display = 'none';
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      hideLoader()
       fetch('/public/config.json')
         .then((response) => response.json())
         .then(async (config) => {
@@ -725,38 +738,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
             document.getElementById('login').addEventListener("click", async (e) => {
               e.preventDefault();
+              showLoader();
+              
               const email = document.getElementById('email').value;
               const password = document.getElementById('password').value;
-              
-              const response = await fetch(`${loginUrl}`, {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ email, password }),
-              });
 
-              const result = await response.json();
-
-              if (response.ok) {
-                localStorage.setItem("token", result.token);
-                
-                const profileResponse = await fetch(`${apiBaseUrl}/auth/profile`, {
+              try {
+                const response = await fetch(`${loginUrl}`, {
+                  method: "POST",
                   headers: {
-                    Authorization: result.token,
+                    "Content-Type": "application/json",
                   },
+                  body: JSON.stringify({ email, password }),
                 });
 
-                const { result: user } = await profileResponse.json();
-                
-                alert("Login berhasil!");
-                if (user.Role.role_name == "ADMIN") {
-                  window.location.href = "/public/admin/dashboard";
-                  return;
+                const result = await response.json();
+
+                if (response.ok) {
+                  localStorage.setItem("token", result.token);
+                  
+                  const profileResponse = await fetch(`${apiBaseUrl}/auth/profile`, {
+                    headers: {
+                      Authorization: result.token,
+                    },
+                  });
+
+                  const { result: user } = await profileResponse.json();
+                  
+                  alert("Login berhasil!");
+                  
+                  if (user.Role.role_name === "ADMIN") {
+                    window.location.href = "/public/admin/dashboard";
+                    return;
+                  }
+                  window.location.href = "/public/index.html";
+                } else {
+                  alert(result.error || result.msg || "Login gagal.");
                 }
-                window.location.href = "/public/index.html";
-              } else {
-                alert(result.error || result.msg || "Login gagal.");
+              } catch (error) {
+                console.error("Terjadi kesalahan:", error);
+                alert("Terjadi kesalahan. Silakan coba lagi.");
+              } finally {
+                // Sembunyikan loader
+                hideLoader();
               }
             });
           })

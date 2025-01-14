@@ -39,7 +39,18 @@
         </div>
     </div>
 
+    <div id="loader">
+        <div class="spinner-border animate-spin"></div>
+      </div>
+
     <script>
+        function showLoader() {
+            document.getElementById('loader').style.display = 'flex';
+        }
+
+        function hideLoader() {
+            document.getElementById('loader').style.display = 'none';
+        }
         // Helper functions
         function setItemWithExpiry(key, value, expiryInMs) {
             const now = new Date();
@@ -90,6 +101,7 @@
 
         document.getElementById('otpForm').addEventListener('submit', async (event) => {
             event.preventDefault();
+            showLoader()
             const otpCode = document.getElementById('otpCode').value;
 
             try {
@@ -114,10 +126,13 @@
             } catch (error) {
                 console.error('Gagal memverifikasi OTP:', error);
                 alert('Terjadi kesalahan. Silakan coba lagi.');
+            }finally{
+                hideLoader()
             }
         });
 
         resendButton.addEventListener('click', async () => {
+            showLoader();
             if (!email) {
                 alert('Email tidak ditemukan, silakan ulang proses pendaftaran.');
                 return;
@@ -146,6 +161,8 @@
             } catch (error) {
                 console.error('Gagal mengirim ulang OTP:', error);
                 alert('Terjadi kesalahan. Silakan coba lagi.');
+            }finally{
+                hideLoader()
             }
         });
 

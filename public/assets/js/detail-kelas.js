@@ -1,4 +1,12 @@
+function showLoader() {
+    document.getElementById('loader').style.display = 'flex';
+  }
+  
+  function hideLoader() {
+    document.getElementById('loader').style.display = 'none';
+  }
 document.addEventListener("DOMContentLoaded", () => {
+  hideLoader()
   const addDetailBtn = document.getElementById("addDetailBtn");
   const detailModal = document.getElementById("detailModal");
   const closeModal = detailModal.querySelector(".close");
@@ -9,14 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const token = localStorage.getItem("token");
   let isEdit = false;
   let editId = null;
-
-  // function showLoading() {
-  //     document.getElementById("loading-spinner").classList.remove("hidden");
-  // }
-
-  // function hideLoading() {
-  //     document.getElementById("loading-spinner").classList.add("hidden");
-  // }
 
   fetch('/public/config.json')
       .then(response => response.json())
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
               fileContainer.appendChild(newFileInput);
           });
 
-          // Loading spinner hanya untuk submit form
           form.addEventListener("submit", async (e) => {
+              showLoader()
               e.preventDefault();
               const formData = new FormData(form);
 
@@ -72,10 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
                   }
               } catch (error) {
                   console.error("Error saving detail:", error);
+              }finally{
+                hideLoader();
               }
           });
 
-          // Fungsi untuk fetch data (tidak ada loading spinner di sini)
           async function fetchDetails() {
               try {
                   const response = await fetch(`${baseUrl}/detail_class`, {

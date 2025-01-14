@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const totalContent = document.getElementById('total-konten');
   let userChart;
 
-  // Fetch config dan API
   fetch('/public/config.json')
     .then(response => response.json())
     .then(config => {

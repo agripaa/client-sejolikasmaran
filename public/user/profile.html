@@ -569,6 +569,10 @@
         </div>
       </div>
     </div>
+
+    <div id="loader">
+      <div class="spinner-border animate-spin"></div>
+    </div>
     <!--Import Vendor Js-->
     <script src="/public/assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="/public/assets/js/vendor/jquery-3.6.0.min.js"></script>
@@ -582,7 +586,15 @@
     <script src="/public/assets/js/vendor/mobile-menu.js"></script>
     <script src="/public/assets/js/main.js?v=2.0"></script>
     <script>
+    function showLoader() {
+      document.getElementById('loader').style.display = 'flex';
+    }
+
+    function hideLoader() {
+      document.getElementById('loader').style.display = 'none';
+    }
 document.addEventListener('DOMContentLoaded', () => {
+  hideLoader()
   const husbandField = document.getElementById('husband_name');
   const wifeField = document.getElementById('wife_name');
 
@@ -594,8 +606,8 @@ document.addEventListener('DOMContentLoaded', () => {
       husbandField.style.display = 'none';
       wifeField.style.display = 'block';
     } else if (relationType === '3' || relationType === 3) {
-      husbandField.style.display = 'none';
-      wifeField.style.display = 'none';
+      husbandField.style.display = 'block';
+      wifeField.style.display = 'block';
     }
   }
 
@@ -630,11 +642,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const { result: user } = await response.json();
+        console.log({date_birth: user.date_birth})
         document.getElementById('username').value = user.username;
         document.getElementById('email').value = user.email;
         document.getElementById('phone').value = user.phone || '';
         document.getElementById('address').value = user.address || '';
-        document.getElementById('date_birth').value = user.date_birth || '';
+        document.getElementById('date_birth').value = new Date(user.date_birth).toISOString().split('T')[0] || '';
         document.getElementById('relation_types').value = user.relation_types || '1';
         document.getElementById('husband_name_input').value = user.husband_name || '';
         document.getElementById('wife_name_input').value = user.wife_name || '';
@@ -676,6 +689,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       document.getElementById('updateProfileBtn').addEventListener('click', async () => {
+        showLoader();
         const updatedUser = {
           username: document.getElementById('username').value,
           email: document.getElementById('email').value,
@@ -714,6 +728,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
           console.error('Error updating profile:', error);
           alert('Terjadi kesalahan saat memperbarui profil.');
+        } finally {
+          hideLoader();
         }
       });
     })
