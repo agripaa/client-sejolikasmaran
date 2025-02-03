@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sejoli Kasmaran</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Tailwind CSS Saas Landing Page" />
+    <meta name="author" content="alithemes.com" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/assets/imgs/logos/sejoli-kasmaran-logo.svg"
+    />
+    <!-- Vendor CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/assets/css/animate.min.css?v=2.0" />
+    <link rel="stylesheet" href="/public/assets/css/slick.css?v=2.0" />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="/public/assets/css/tailwind-built.css?v=2.0" />
+  </head>
+  <body class="bg-white text-body font-body">
+    <div class="main">
+      <!--Header-->
+      <header class="bg-transparent sticky-bar mt-4">
+        <div class="container bg-transparent">
+          <nav class="bg-transparent flex justify-between items-center py-3">
+            <a
+              class="text-3xl font-semibold leading-none"
+              href="/public/index.html"
+            >
+              <img
+                class="h-10"
+                src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+              <li class="group relative pt-4 pb-4">
+                <a
+                  href="/public/index.html"
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  >Beranda</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="group relative pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/news/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="pt-4 pb-4">
+                <a
+                  class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="hidden lg:block" id="navbar-auth">
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            </div>
+            
+            <div class="lg:hidden">
+              <button
+                class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300"
+              >
+                <svg
+                  class="fill-current h-4 w-4"
+                  viewbox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!--Mobile menu-->
+      <div class="hidden navbar-menu relative z-50 transition duration-300">
+        <div
+          class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"
+        ></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300"
+        >
+          <div class="flex items-center mb-8">
+            <a
+              class="mr-auto text-3xl font-semibold leading-none"
+              href="/public/index.html"
+            >
+              <img
+                class="h-10"
+                src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                alt=""
+              />
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewbox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul class="mobile-menu">
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/index.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/about.html"
+                  >Tentang</a
+                >
+              </li>
+              <li class="mb-1 menu-item-has-children rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500"
+                  href="/public/services.html"
+                  >Layanan</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/news/blog.html"
+                  >Berita dan Artikel</a
+                >
+              </li>
+              <li class="mb-1 rounded-xl">
+                <a
+                  class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl"
+                  href="/public/contact.html"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+            <div class="hidden lg:block" id="navbar-auth">
+              <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+              <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <main class="container min-h-screen flex justify-center items-center">
+        <section id="tbj-calculator" class="container mx-auto px-4 py-8">
+            <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+              <h2 class="text-2xl font-semibold text-center text-gray-700 mb-6">
+                Kalkulator Berat Janin
+              </h2>
+              <form id="tbj-form" class="space-y-6">
+                <div class="space-y-4">
+                  <label for="tfu" class="block text-gray-600"
+                    >Tinggi Fundus Uteri (TFU) dalam cm:</label
+                  >
+                  <input
+                    type="number"
+                    id="tfu"
+                    required
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  />
+                </div>
+                <div class="space-y-4">
+                  <label for="n-value" class="block text-gray-600"
+                    >Posisi Kepala Janin:</label
+                  >
+                  <select
+                    id="n-value"
+                    class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  >
+                    <option value="11">1. Kepala belum melewati panggul</option>
+                    <option value="12">2. Kepala sudah melewati panggul</option>
+                    <option value="13">
+                      3. Kepala belum masuk pintu atas panggul
+                    </option>
+                  </select>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-indigo-600 text-white p-3 rounded-md hover:bg-indigo-700"
+                >
+                  Hitung Berat Janin
+                </button>
+              </form>
+              <div
+                id="tbj-result"
+                class="mt-4 text-center text-lg font-semibold text-blue-500"
+              ></div>
+            </div>
+          </section>
+      </main>
+
+      <!--Footer 2-->
+      <section class="relative footer-2 border-t border-gray-100">
+        <div
+          class="hidden lg:block absolute inset-0 w-1/2 ml-auto bg-blueGray-50"
+        ></div>
+        <div class="container">
+          <div class="relative flex flex-wrap -mx-4">
+            <div
+              class="w-full lg:w-1/2 pt-20 px-4 max-w-lg lg:max-w-full mx-auto lg:mx-0 text-center lg:text-left"
+            >
+              <a
+                class="inline-block mx-auto lg:ml-0 text-3xl font-semibold leading-none wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".1s"
+                href="/public/index.html"
+              >
+                <img
+                  class="h-10"
+                  src="/public/assets/imgs/logos/sejoli-kasmaran-horizontal.svg"
+                  alt=""
+                />
+              </a>
+              <div class="mt-12 mb-16">
+                <p
+                  class="mb-4 text-xs text-blueGray-400 text-center lg:text-left wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  Berlangganan dan tetap terhubung sepenuhnya dengan Sejoli
+                  Kasmaran!
+                </p>
+                <div
+                  class="flex flex-wrap lg:flex-nowrap items-center wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <div
+                    class="flex w-full lg:w-2/3 mb-3 lg:mb-0 px-4 bg-blueGray-50 rounded"
+                  >
+                    <svg
+                      class="h-6 w-6 my-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewbox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      ></path>
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      ></path>
+                    </svg>
+                    <input
+                      class="w-full py-4 pl-3 text-xs text-blueGray-400 bg-blueGray-50 outline-none"
+                      type="text"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <button
+                    class="hover-up-2 w-full lg:w-auto py-4 px-8 lg:ml-6 text-xs text-white font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded"
+                    type="submit"
+                  >
+                    Buat Akun
+                  </button>
+                </div>
+              </div>
+              <div
+                class="hidden lg:block wow animate__animated animate__fadeInUp animated"
+                data-wow-delay=".5s"
+              >
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran .All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a class="inline-block px-2" href="#">
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt="https://www.instagram.com/sejolikasmaran"
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="relative w-full lg:w-1/2 px-4 pt-40 lg:pl-12">
+              <div class="flex flex-row flex-wrap justify-around mb-12">
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".1s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Tentang</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/about.html"
+                        >Tentang Kami</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Berita & Artikel</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services.html"
+                        >Layanan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/contact.html"
+                        >Kontak</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-1/2 lg:w-auto mb-12 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".3s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Fitur</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-calculator/health-calculator.html"
+                        >Kalkulator Prediksi Persalinan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-risk-score/pregnancy-risk.html"
+                        >Skor Risiko Kehamilan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/body-mass-index-calculator/health-calculator-2.html"
+                        >Kalkulator Indeks Masa Tubuh (IMT)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/live-chat/consultation-options.html"
+                        >Live Chat</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnancy-journal/journal.html"
+                        >Jurnal Kehamilanku</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/study-corner.html"
+                        >Pojok Belajar</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/pregnant-women-community/coming-soon.html"
+                        >Komunitas Ibu Hamil</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/services/online-prenatal-yoga/live-yoga-notification.html"
+                        >Kelas Yoga & Relaksasi Prenatal Online</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="w-full lg:w-auto mb-4 wow animate__animated animate__fadeInUp animated"
+                  data-wow-delay=".5s"
+                >
+                  <h5 class="mb-6 text-lg font-bold font-heading">Blog</h5>
+                  <ul class="space-y-3">
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Artikel Kesehatan</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-lg text-blueGray-400 hover:text-blueGray-500"
+                        href="/public/news/blog.html"
+                        >Ibu Hamil Berbagi Cerita</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="lg:hidden text-center">
+                <p class="text-xs text-blueGray-400">
+                  &copy; 2024. Sejoli Kasmaran. All rights reserved.
+                </p>
+                <div class="-mx-2 mt-4">
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/facebook-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/twitter-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                  <a
+                    class="inline-block px-2"
+                    href="https://www.instagram.com/sejolikasmaran"
+                  >
+                    <img
+                      src="/public/assets/imgs/icons/instagram-blue.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End .main -->
+
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+      <div class="preloader flex-1 content-center">
+        <div class="logo absolute inset-y-2/4 jump">
+          <img
+            src="/public/assets/imgs/logos/sejoli-kasmaran-preloader.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <!--Import Vendor Js-->
+    <script src="/public/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="/public/assets/js/vendor/waypoints.js"></script>
+    <script src="/public/assets/js/vendor/counterup.js"></script>
+    <script src="/public/assets/js/vendor/slick.js"></script>
+    <script src="/public/assets/js/vendor/wow.js"></script>
+    <script src="/public/assets/js/vendor/scrollup.js"></script>
+    <script src="/public/assets/js/vendor/smooth.js"></script>
+    <script src="/public/assets/js/vendor/textType.js"></script>
+    <script src="/public/assets/js/vendor/mobile-menu.js"></script>
+    <script src="/public/assets/js/main.js?v=2.0"></script>
+
+
+    <script>
+      document
+        .getElementById("tbj-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const tfu = parseFloat(document.getElementById("tfu").value);
+          const n = parseInt(document.getElementById("n-value").value);
+
+          if (isNaN(tfu) || isNaN(n)) {
+            document.getElementById("tbj-result").innerText =
+              "Masukkan nilai yang valid.";
+            return;
+          }
+
+          const tbj = (tfu - n) * 155;
+          const tbjKg = tbj / 1000;
+
+          document.getElementById(
+            "tbj-result"
+          ).innerText = `Perkiraan Berat Janin: ${tbj.toFixed(
+            2
+          )} gram (${tbjKg.toFixed(2)} kg)`;
+        });
+    </script>
+    <script>
+      (function ($) {
+        "use strict";
+        // Page loading
+        $(window).on("load", function () {
+            $("#preloader-active").delay(450).fadeOut("slow");
+            $("body").delay(450).css({
+            overflow: "visible",
+            });
+        });
+        /*-----------------
+                Menu Stick
+            -----------------*/
+        var header = $(".sticky-bar");
+        var win = $(window);
+        win.on("scroll", function () {
+            var scroll = win.scrollTop();
+            if (scroll < 20) {
+            header.removeClass("stick");
+            } else {
+            header.addClass("stick");
+            }
+        });
+
+        /*Carausel 2 columns*/
+        $(".carausel-2-columns").each(function (key, item) {
+            var id = $(this).attr("id");
+            var sliderID = "#" + id;
+            var appendArrowsClassName = "#" + id + "-arrows";
+
+            $(sliderID).slick({
+            dots: false,
+            infinite: true,
+            speed: 1000,
+            arrows: true,
+            autoplay: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            loop: true,
+            adaptiveHeight: true,
+            responsive: [
+                {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+                },
+            ],
+            prevArrow:
+                '<span class="mr-4 text-blue-500 flex"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg></span>',
+            nextArrow:
+                '<span class="text-blue-500  flex"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>',
+            appendArrows: appendArrowsClassName,
+            });
+        });
+
+        /*Carausel Fade*/
+        $(".carausel-fade").each(function (key, item) {
+            var id = $(this).attr("id");
+            var sliderID = "#" + id;
+            var appendArrowsClassName = "#" + id + "-arrows";
+
+            $(sliderID).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            loop: true,
+            dots: false,
+            arrows: true,
+            prevArrow:
+                '<span class="mr-4 text-blue-500 flex"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path></svg></span>',
+            nextArrow:
+                '<span class="text-blue-500  flex"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></span>',
+            appendArrows: appendArrowsClassName,
+            autoplay: true,
+            });
+        });
+
+        /*Carausel Fade has Dots*/
+        $(".carausel-fade-2").each(function (key, item) {
+            var id = $(this).attr("id");
+            var sliderID = "#" + id;
+            var appendArrowsClassName = "#" + id + "-arrows";
+
+            $(sliderID).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            loop: true,
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            });
+        });
+
+        /*---------------------
+                Mobile menu active
+            ------------------------ */
+        var $offCanvasNav = $(".mobile-menu"),
+            $offCanvasNavSubMenu = $offCanvasNav.find(".dropdown");
+
+        /*Add Toggle Button With Off Canvas Sub Menu*/
+        $offCanvasNavSubMenu.parent().prepend('<span class="menu-expand">+</span>');
+
+        /*Close Off Canvas Sub Menu*/
+        $offCanvasNavSubMenu.slideUp();
+
+        /*Category Sub Menu Toggle*/
+        $offCanvasNav.on("click", "li a, li .menu-expand", function (e) {
+            var $this = $(this);
+            if (
+            $this
+                .parent()
+                .attr("class")
+                .match(/\b(menu-item-has-children|has-children|has-sub-menu)\b/) &&
+            ($this.attr("href") === "#" || $this.hasClass("menu-expand"))
+            ) {
+            e.preventDefault();
+            if ($this.siblings("ul:visible").length) {
+                $this.parent("li").removeClass("active");
+                $this.siblings("ul").slideUp();
+            } else {
+                $this.parent("li").addClass("active");
+                $this
+                .closest("li")
+                .siblings("li")
+                .removeClass("active")
+                .find("li")
+                .removeClass("active");
+                $this.closest("li").siblings("li").find("ul:visible").slideUp();
+                $this.siblings("ul").slideDown();
+            }
+            }
+        });
+
+        /*------ ScrollUp -------- */
+        $.scrollUp({
+            scrollText:
+            '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>',
+            easingType: "linear",
+            scrollSpeed: 900,
+            animation: "fade",
+        });
+
+        /*------ Wow Active ----*/
+        new WOW().init();
+
+        /*---- CounterUp ----*/
+        $(".count").counterUp({
+            delay: 10,
+            time: 2000,
+        });
+        })(jQuery);
+        document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        let score = 2; // Set initial score to 2
+
+        // Ambil nilai dari form
+        const ageFirstPregnancy = parseInt(urlParams.get("ageFirstPregnancy")) || 0;
+        const currentPregnancyOver35 =
+            parseInt(urlParams.get("currentPregnancyOver35")) || 0;
+        const yearsSinceFirstPregnancy =
+            parseInt(urlParams.get("yearsSinceFirstPregnancy")) || 0;
+        const failedPregnancy = parseInt(urlParams.get("failedPregnancy")) || 0;
+        const caesarean = parseInt(urlParams.get("caesarean")) || 0;
+        const forceps = parseInt(urlParams.get("forceps")) || 0;
+        const manualPlacenta = parseInt(urlParams.get("manualPlacenta")) || 0;
+        const infusionTransfusion =
+            parseInt(urlParams.get("infusionTransfusion")) || 0;
+
+        // Kesehatan Ibu
+        const anemia = parseInt(urlParams.get("anemia")) || 0;
+        const malaria = parseInt(urlParams.get("malaria")) || 0;
+        const tbc = parseInt(urlParams.get("tbc")) || 0;
+        const heartDisease = parseInt(urlParams.get("heartDisease")) || 0;
+        const diabetes = parseInt(urlParams.get("diabetes")) || 0;
+        const std = parseInt(urlParams.get("std")) || 0;
+
+        // Kondisi Kehamilan
+        const swelling = parseInt(urlParams.get("swelling")) || 0;
+        const multiplePregnancy = parseInt(urlParams.get("multiplePregnancy")) || 0;
+        const hydramnion = parseInt(urlParams.get("hydramnion")) || 0;
+        const stillbirth = parseInt(urlParams.get("stillbirth")) || 0;
+        const overdue = parseInt(urlParams.get("overdue")) || 0;
+        const breech = parseInt(urlParams.get("breech")) || 0;
+        const transverse = parseInt(urlParams.get("transverse")) || 0;
+        const bleeding = parseInt(urlParams.get("bleeding")) || 0;
+        const preeclampsia = parseInt(urlParams.get("preeclampsia")) || 0;
+
+        // Perhitungan Skor Berdasarkan Faktor Risiko
+        score += ageFirstPregnancy <= 16 ? 4 : 0; // Faktor 1
+        score += currentPregnancyOver35 ? 4 : 0; // Faktor 2
+        score += yearsSinceFirstPregnancy >= 4 ? 4 : 0; // Faktor 3
+        score += parseInt(urlParams.get("yearsSinceLastPregnancy")) <= 2 ? 4 : 0; // Faktor 5
+        score += parseInt(urlParams.get("numberOfChildren")) >= 4 ? 4 : 0; // Faktor 6
+        score += ageFirstPregnancy >= 35 ? 4 : 0; // Faktor 7
+        score += parseInt(urlParams.get("height")) <= 145 ? 4 : 0; // Faktor 8
+
+        // Riwayat kehamilan sebelumnya
+        score += failedPregnancy ? 4 : 0; // Faktor 9a
+        score += forceps ? 4 : 0; // Faktor 9b
+        score += infusionTransfusion ? 4 : 0; // Faktor 9c
+        score += caesarean ? 8 : 0; // Faktor 10
+
+        // Penyakit pada ibu
+        score += anemia ? 4 : 0; // Faktor 11a
+        score += malaria ? 4 : 0;
+        score += tbc ? 4 : 0; // Faktor 11b
+        score += heartDisease ? 4 : 0;
+        score += diabetes ? 4 : 0; // Faktor 11c
+        score += std ? 4 : 0; // Faktor 11d
+
+        // Kondisi kehamilan saat ini
+        score += swelling ? 4 : 0; // Faktor 12
+        score += multiplePregnancy ? 4 : 0; // Faktor 13
+        score += hydramnion ? 4 : 0; // Faktor 14
+        score += stillbirth ? 4 : 0; // Faktor 15
+        score += overdue ? 4 : 0; // Faktor 16
+        score += breech ? 8 : 0; // Faktor 17
+        score += transverse ? 8 : 0; // Faktor 18
+        score += bleeding ? 8 : 0; // Faktor 19
+        score += preeclampsia ? 8 : 0; // Faktor 20
+
+        // Tentukan hasil berdasarkan skor
+        let status = "";
+        let explanation = "";
+
+        if (score <= 2) {
+            status = "Kehamilan yang Sehat";
+            explanation = `
+                        <p class="mb-4">Status Kehamilan: <span class="font-bold text-green-600">Kehamilan yang Sehat</span></p>
+                        <p>Selamat, kehamilan Anda dalam kondisi baik. Anda dapat merencanakan persalinan di Poliklinik Desa (POLINDES) dengan pendampingan bidan kami. Tidak diperlukan rujukan khusus, dan kami siap membantu Anda menjalani proses persalinan dengan tenang dan nyaman.</p>
+                    `;
+        } else if (score >= 3 && score <= 11) {
+            status = "Kehamilan dengan Perhatian Lebih";
+            explanation = `
+                        <p class="mb-4">Status Kehamilan: <span class="font-bold text-yellow-600">Kehamilan dengan Perhatian Lebih</span></p>
+                        <p>Kehamilan Anda memerlukan perhatian lebih. Kami menyarankan Anda untuk menjalani persalinan di fasilitas kesehatan yang lebih lengkap seperti Puskesmas atau Rumah Sakit. Di sana, bidan dan dokter akan mendampingi serta memastikan semua kebutuhan persalinan Anda terpenuhi dengan baik.</p>
+                    `;
+        } else {
+            status = "KRST (Kehamilan dengan Penanganan Intensif)";
+            explanation = `
+                        <p class="mb-4">Status Kehamilan: <span class="font-bold text-red-600">Kehamilan dengan Penanganan Intensif</span></p>
+                        <p>Kehamilan Anda membutuhkan penanganan intensif. Kami menyarankan agar Anda segera mendapatkan pelayanan di fasilitas kesehatan, di mana dokter dan tenaga medis siap mendampingi proses persalinan Anda. Kami berkomitmen untuk memberikan dukungan terbaik demi keselamatan Anda dan bayi Anda.</p>
+                    `;
+        }
+
+        // Tampilkan hasil di halaman
+        document.getElementById("score").innerText = score;
+        document.getElementById("status").innerText = status;
+        document.getElementById("explanation").innerHTML = explanation;
+        });
+
+
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('../../config.json')
+          .then((response) => response.json())
+          .then(async (config) => {
+            const apiBaseUrl = config.API_BASE_URL;
+            const profilUrl = `${apiBaseUrl}/auth/profile`;
+            const token = localStorage.getItem('token');
+
+            const navbarAuth = document.getElementById('navbar-auth');
+
+            if (!token) {
+              navbarAuth.innerHTML = `
+                <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+                <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+              `;
+              return;
+            }
+
+            try {
+              const response = await fetch(profilUrl, {
+                method: 'GET',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `${token}`,
+                },
+              });
+
+              if (!response.ok) {
+                navbarAuth.innerHTML = `
+                  <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+                  <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+                `;
+                return;
+              }
+
+              const result = await response.json();
+              const username = result.result.username; // Pastikan API mengembalikan `username`
+
+              navbarAuth.innerHTML = `
+                <a href="/public/user/profile.html" class="text-sm font-semibold text-blueGray-600 mr-4">Hello, ${username}!</a>
+                <button class="btn-accent hover-up-2" id="logout">Keluar</button>
+              `;
+
+              // Tambahkan event listener untuk tombol logout
+              document.getElementById('logout').addEventListener('click', () => {
+                localStorage.removeItem('token');
+                window.location.reload();
+              });
+            } catch (error) {
+              console.error('Gagal mendapatkan profil:', error);
+              navbarAuth.innerHTML = `
+                <a class="btn-accent hover-up-2" href="/public/user/login.html">Masuk</a>
+                <a class="btn-primary hover-up-2" href="/public/user/signup.html">Buat Akun</a>
+              `;
+            }
+          })
+          .catch((error) => console.error('Gagal memuat konfigurasi:', error));
+      });
+
+    </script>
+  </body>
+</html>
